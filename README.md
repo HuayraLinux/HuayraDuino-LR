@@ -2,12 +2,12 @@
 
 HuayraDuino es un entorno de programación visual para Arduino. Está basado en [Blockly][1], con modificaciones para poder generar código [Arduino][15].
 
-![Ardublockly desktop program screenshot][desktop_screeshot]
-
 ## Características
 * Genera código Arduino visualmente arrastrando y soltando bloques.
 * Permite subir el programa a una placa Arduino.
 * Es compatible con una gran cantidad de placas Arduino originales.
+
+[![shot1](docs/img/huayra-duino-screenshot.png)]
 
 ## Clonando el repositorio
 Importante: algunos submódulos requieren ser inicializados, por ello la forma correcta de clonar el repo es:
@@ -19,7 +19,7 @@ git submodule update --init --recursive
 ```
 
 
-## Installing
+## Instación
 La aplicación corre en forma independiente y puede ser ejecutada con:
 
 $ huayra-duino.sh
