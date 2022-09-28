@@ -1,4 +1,4 @@
-# HuayraDuino
+# HuayraDuino LR (La Rioja)
 
 HuayraDuino es un entorno de programación visual para Arduino. Está basado en [Blockly][1], con modificaciones para poder generar código [Arduino][15].
 
