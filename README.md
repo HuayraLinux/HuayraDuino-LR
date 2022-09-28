@@ -7,7 +7,7 @@ HuayraDuino es un entorno de programación visual para Arduino. Está basado en 
 * Permite subir el programa a una placa Arduino.
 * Es compatible con una gran cantidad de placas Arduino originales.
 
-[![shot1](docs/img/huayra-duino-screenshot.png)]
+![shot1](docs/img/huayra-duino-screenshot.png)
 
 ## Clonando el repositorio
 Importante: algunos submódulos requieren ser inicializados, por ello la forma correcta de clonar el repo es:
