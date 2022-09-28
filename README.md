@@ -2,8 +2,6 @@
 
 HuayraDuino es un entorno de programación visual para Arduino. Está basado en [Blockly][1], con modificaciones para poder generar código [Arduino][15].
 
-![Ardublockly desktop program screenshot][desktop_screeshot]
-
 ## Características
 * Genera código Arduino visualmente arrastrando y soltando bloques.
 * Permite subir el programa a una placa Arduino.
@@ -19,7 +17,7 @@ git submodule update --init --recursive
 ```
 
 
-## Installing
+## Instación
 La aplicación corre en forma independiente y puede ser ejecutada con:
 
 $ huayra-duino.sh
