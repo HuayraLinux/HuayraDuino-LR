@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python start.py
+python /opt/huayra-duino-lr/start.py
