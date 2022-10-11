@@ -1,0 +1,18 @@
+#! /bin/sh
+
+set -e
+
+# The following only on a new install
+if [ "$1" = "configure" ]; then
+  echo "Configure"
+  # The following only on a new install
+  if [ "$2" = "" ]; then
+    echo "First time install"
+  fi
+
+fi
+
+chmod -R 666 /opt/huayra-duino-lr/*.ini
+
+exit 0
+#DEBHELPER#

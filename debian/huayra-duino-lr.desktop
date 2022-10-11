@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Huayra Duino [La Rioja]
 Comment=Huayra Duino [La Rioja]
-Exec=huayra-duino-lr
+Exec=/usr/bin/huayra-duino
 Terminal=false
 Type=Application
 Icon=huayra-duino-lr
-Categories=Huayra;Programming;GNOME;MATE
+Categories=Huayra;Development;Electronics;GNOME;MATE
