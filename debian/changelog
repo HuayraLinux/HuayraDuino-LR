@@ -1,3 +1,9 @@
+huayra-duino-lr (1.0.1) unstable; urgency=medium
+
+  * fix de permisos de sketch 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 12 Oct 2022 01:16:34 -0300
+
 huayra-duino-lr (1.0) unstable; urgency=medium
 
   * Version inicia Huayra Duino La Rioja.
