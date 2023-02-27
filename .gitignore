@@ -1,2 +1,4 @@
 ServerCompilerSettings.ini
 *.log
+node_modules
+out/

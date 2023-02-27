@@ -21,7 +21,7 @@ import ardublocklyserver.server
 import ardublocklyserver.compilersettings
 
 
-def open_browser(open_file):
+def open_browser(open_file):  
     """
     Start a browser in a separate thread after waiting for half a second.
     """
@@ -31,7 +31,6 @@ def open_browser(open_file):
 
     thread = threading.Timer(0.5, _open_browser)
     thread.start()
-
 
 def find_ardublockly_dir(search_path):
     """
@@ -128,6 +127,7 @@ def main():
     """
     Initialises the Settings singleton, resolves paths, and starts the server.
     """
+    
     print('Running Python %s (%s bit) on %s' % (platform.python_version(),
           (struct.calcsize('P') * 8), platform.platform()))
 
@@ -167,8 +167,11 @@ def main():
         relative_path = os.path.relpath(ardublockly_html_dir, server_root)
         print("Ardublockly page relative path from server root: %s" %
               relative_path)
-        open_browser(relative_path)
 
+        # open_browser(relative_path) // version 1 - se reforma para Electron
+        print("URL-Browser: http://localhost:%s/%s/index.html##" % (ardublocklyserver.server.PORT, relative_path))
+        print("  ")
+    sys.stdout.flush()
     ardublocklyserver.server.start_server(server_root)
 
 
