@@ -5,7 +5,8 @@
   "main": "main.js",
   "author": "huayra developers",
   "scripts": {
-    "start": "ENV=dev electron-forge start",
+    "start": "ENV=dev electron .",
+    "forge-start": "ENV=dev electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },

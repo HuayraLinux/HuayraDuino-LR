@@ -157,8 +157,13 @@ def main():
 
     print('\n\n======= Loading Settings =======')
     # ServerCompilerSettings is a singleton, no need to save instance
-    ardublocklyserver.compilersettings.ServerCompilerSettings(
-        ardublockly_root_dir)
+    homeServerCompilerSettings = os.getenv("HOME")
+    if os.path.exists(homeServerCompilerSettings):
+        ardublocklyserver.compilersettings.ServerCompilerSettings(
+            homeServerCompilerSettings)
+    else:
+        ardublocklyserver.compilersettings.ServerCompilerSettings(
+            ardublockly_root_dir)
 
     print('\n\n======= Starting Server =======\n')
     if launch_browser:
