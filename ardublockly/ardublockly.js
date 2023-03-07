@@ -296,6 +296,12 @@ Ardublockly.saveXmlFile = function() {
   Ardublockly.saveTextFileAs(
       document.getElementById('sketch_name').value + '.xml',
       Ardublockly.generateXml());
+  //Ardublockly.sketchNameSet();
+  /*
+  Ardublockly.alertMessage('test',JSON.stringify(fileName) + ' => ' + 
+                           document.getElementById('sketch_name').value,
+                           true)
+  */
 };
 
 /**
@@ -477,21 +483,26 @@ Ardublockly.setIdeSettings = function(e, preset) {
  */
 Ardublockly.sendCode = function() {
   Ardublockly.largeIdeButtonSpinner(true);
-
   /**
    * Receives the IDE data back to be displayed and stops spinner.
    * @param {element} jsonResponse JSON data coming back from the server.
    * @return {undefined} Might exit early if response is null.
    */
   var sendCodeReturn = function(jsonResponse) {
+    console.log('Promise...')
+    console.log(jsonResponse)
     Ardublockly.largeIdeButtonSpinner(false);
     if (jsonResponse === null) return Ardublockly.openNotConnectedModal();
     var dataBack = ArdublocklyServer.createElementFromJson(jsonResponse);
+    console.log('DataBack')
+    console.log(dataBack)
     Ardublockly.arduinoIdeOutput(dataBack);
   };
 
+  console.log('Sending Sketch To Server')
   ArdublocklyServer.sendSketchToServer(
       Ardublockly.generateArduino(), sendCodeReturn);
+  console.log('Sended ok ?')      
 };
 
 /** Populate the workspace blocks with the XML written in the XML text area. */
