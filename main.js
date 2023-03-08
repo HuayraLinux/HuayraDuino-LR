@@ -14,6 +14,7 @@ const BrowserWindow = electron.BrowserWindow;
 const server = require('./electron/servermgr.js');
 const projectLocator = require('./electron/projectlocator.js');
 const path = require('path')
+const jetpack = require('fs-jetpack');
 const packageData = require('fs-jetpack').cwd(app.getAppPath()).read('package.json', 'json');
 
 const tag = '[ArdublocklyElec] ';
@@ -22,14 +23,14 @@ const tag = '[ArdublocklyElec] ';
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
 
-// Set up the app data directory within the Ardublockly root directory
+// Set up the app data directory within the Ardublockly home directory
 (function setAppData() {
-    var appDataPath = projectLocator.getExecDirJetpack().cwd('appdata');
+    var appDataPath = jetpack.dir(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']).cwd('hdlr-appdata')
     app.setPath('appData', appDataPath.path());
     app.setPath('userData', appDataPath.path());
     app.setPath('cache', appDataPath.path('GenCache'));
     app.setPath('userCache', appDataPath.path('AppCache'));
-    app.setPath('temp', appDataPath.path('temp'));
+    app.setPath('temp', appDataPath.path('temp')); 
 })();
 
 // Ensure this is a single instance application
