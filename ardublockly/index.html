@@ -237,14 +237,16 @@
       </div>
     </div>
   </div>
-
+  
+  <div class="row" style="position: fixed; bottom: -16px; width: 100%;" >
+    
   <!-- IDE Output content -->
-  <div class="ide_output_wrapper">
+  <div class="col-auto ide_output_wrapper">
     <ul class="collapsible ide_output_collapsible" data-collapsible="expandable">
       <li>
         <div id="ide_output_collapsible_header" class="collapsible-header ide_output_header_normal">
           <i class="mdi-action-swap-vert Medium" style="font-size: 2.2rem;"></i>
-          <span class="translatable_arduinoOpMainTitle">salida de Arduino IDE</span>
+          <span class="translatable_arduinoOpMainTitle">salida del Arduino IDE</span>
         </div>
         <div class="collapsible-body">
           <div id="content_ide_output" class="content"></div>
@@ -252,7 +254,26 @@
       </li>
     </ul>
   </div>
-  <div id="ide_output_spacer"></div>
+  <div id="ide_output_spacer"></div> 
+  
+  
+  <div class="col-auto  port_output_wrapper">
+    <ul class="collapsible port_output_collapsible" data-collapsible="expandable">
+      <li>
+        <div id="port_output_collapsible_header" class="collapsible-header port_output_header_normal">
+          <i class="mdi-action-swap-vert Medium" style="font-size: 2.2rem;"></i>
+          <span class="ranslatable_arduinoOpMainTitle">salida del Puerto</span>
+        </div>
+        <div class="collapsible-body">
+          <div id="content_port_output" class="content"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="port_output_spacer"></div>
+</div>
+
 
   <!-- Settings: Displayed as a Materialize Modal -->
   <div id="settings_dialog" class="modal modal-fixed-footer">

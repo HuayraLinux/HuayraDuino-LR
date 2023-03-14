@@ -3,7 +3,6 @@ const { SerialPort, ReadlineParser } = require('serialport')
 const parser = new ReadlineParser()
 
 const fs = require('fs');
-const { AsyncLocalStorage } = require('async_hooks');
 
 //const writeStream = fs.createWriteStream( "./out.csv", { encoding: "utf8"} );
 
@@ -22,9 +21,9 @@ port.on("open", function () {
     //parser.on('data', console.log)
     parser.on('data', (data) => {
         console.log(data)
-        fs.writeSync(log, data.toString())
+        fs.writeSync(log, data + '\n')
         
-        bueno no se por qué no escribe el archivo pero la idea esta por aca
+        //bueno no se por qué no escribe el archivo pero la idea esta por aca
 
         count += 1;
         if (count > 10 )

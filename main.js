@@ -35,7 +35,7 @@ var mainWindow = null;
 
 // Ensure this is a single instance application
 const gotTheLock = app.requestSingleInstanceLock()
-    
+
 if (!gotTheLock) {
   app.quit()
 } else {
