@@ -10,27 +10,31 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const Menu = electron.Menu;
 
 const server = require('./electron/servermgr.js');
 const projectLocator = require('./electron/projectlocator.js');
 const path = require('path')
 const jetpack = require('fs-jetpack');
 const packageData = require('fs-jetpack').cwd(app.getAppPath()).read('package.json', 'json');
+const saveLog = require('./electron/serial_monitor');
+const serialPort = require('serialport');
 
 const tag = '[ArdublocklyElec] ';
 
 // Global reference of the window object must be maintain, or the window will
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
+//var logWindow = null;
 
 // Set up the app data directory within the Ardublockly home directory
 (function setAppData() {
-    var appDataPath = jetpack.dir(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']).cwd('hdlr-appdata')
+    var appDataPath = jetpack.dir(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'])
     app.setPath('appData', appDataPath.path());
     app.setPath('userData', appDataPath.path());
     app.setPath('cache', appDataPath.path('GenCache'));
     app.setPath('userCache', appDataPath.path('AppCache'));
-    app.setPath('temp', appDataPath.path('temp')); 
+    app.setPath('temp', appDataPath.path('temp'));
 })();
 
 // Ensure this is a single instance application
@@ -49,11 +53,35 @@ if (!gotTheLock) {
     
 };
 
+function setMainMenu() {
+  const template = [
+    {
+      label: 'Obtener Datos',
+      submenu: [
+        {
+          label: 'Activar Log de Puerto Serie',
+          click() {
+            saveLog.startLog();
+          }
+        },
+        {
+            label: 'Detener Log de Puerto Serie',
+            click() {
+              saveLog.stopLog();
+            }
+          }
+        ]
+    }
+  ];
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+}
+
+
 // Electron application entry point
 app.on('ready', function() {
     server.startServer();
-    mainWindow = new BrowserWindow({width: 1000, height: 680}) 
-    mainWindow.menuBarVisible = false
+    mainWindow = new BrowserWindow({width: 1000, height: 700}) 
+    mainWindow.menuBarVisible = true
     mainWindow.type = 'desktop'
     mainWindow.title = 'HuayraDuino'
     mainWindow.minWidth = 530
@@ -61,7 +89,8 @@ app.on('ready', function() {
     mainWindow.resizable = true 
     mainWindow.icon = path.join(__dirname, './favicon.png')
     //mainWindow.webContents.session.clearCache()
-     
+    setMainMenu();
+ 
     mainWindow.webContents.on('did-fail-load',
         function(event, errorCode, errorDescription) {
             console.warn(tag + 'Page failed to load (' + errorCode + '). The ' +
@@ -80,6 +109,27 @@ app.on('ready', function() {
         mainWindow = null;
     });
 
+    /*
+    logWindow = new BrowserWindow({width: 400, height: 500, webPreferences: { nodeIntegration: true } }) 
+    logWindow.menuBarVisible = false
+    logWindow.type = 'desktop'
+    logWindow.title = 'log Serial Port'
+    logWindow.minWidth = 330
+    logWindow.minHeight = 440
+    logWindow.resizable = true 
+
+    logWindow.webContents.on('did-finish-load', function() {      
+        logWindow.show();
+    });
+
+    logWindow.on('close', function() {
+       logWindow = null;
+    });
+    
+    logWindow.loadURL('file://' + path.join(__dirname, 'log.html'));
+    saveLog.startLog(logWindow);
+*/
+    
     // Set the download directory to the home folder
     mainWindow.webContents.session.setDownloadPath(
         process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']);
@@ -88,6 +138,6 @@ app.on('ready', function() {
 
 app.on('window-all-closed', function() {
     server.stopServer();
+    saveLog.stopLog();
     app.quit();
 });
-

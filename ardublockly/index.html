@@ -157,6 +157,16 @@
 
   <!-- Content -->
   <div class="container">
+    <!-- Switch 
+    <div class="switch">
+      Guardar Salida
+      <label>
+        No
+        <input id="button_savelog" type="checkbox">
+        <span class="lever"></span>
+        Si
+      </label>  
+    </div>-->
     <div class="row">
       <div class="col s12 m12 l8" style="position:relative">
         <!-- Toolbox visibility button -->
@@ -238,10 +248,11 @@
     </div>
   </div>
   
-  <div class="row" style="position: fixed; bottom: -16px; width: 100%;" >
+  <!-- <div class="row" style="position: fixed; bottom: -16px; width: 100%;" > -->
     
   <!-- IDE Output content -->
-  <div class="col-auto ide_output_wrapper">
+  <!-- <div class="col-auto ide_output_wrapper"> -->
+  <div class="ide_output_wrapper">
     <ul class="collapsible ide_output_collapsible" data-collapsible="expandable">
       <li>
         <div id="ide_output_collapsible_header" class="collapsible-header ide_output_header_normal">
@@ -256,15 +267,17 @@
   </div>
   <div id="ide_output_spacer"></div> 
   
-  
+<!--
   <div class="col-auto  port_output_wrapper">
     <ul class="collapsible port_output_collapsible" data-collapsible="expandable">
       <li>
         <div id="port_output_collapsible_header" class="collapsible-header port_output_header_normal">
           <i class="mdi-action-swap-vert Medium" style="font-size: 2.2rem;"></i>
+           
           <span class="ranslatable_arduinoOpMainTitle">salida del Puerto</span>
         </div>
         <div class="collapsible-body">
+          
           <div id="content_port_output" class="content"></div>
         </div>
       </li>
@@ -273,7 +286,7 @@
   
   <div id="port_output_spacer"></div>
 </div>
-
+-->  
 
   <!-- Settings: Displayed as a Materialize Modal -->
   <div id="settings_dialog" class="modal modal-fixed-footer">

@@ -26,7 +26,7 @@ module.exports.startServer = function() {
 
         // Setting the listeners
         serverProcess.stdout.on('data', function(data) {
-            console.info(tagSrv + data);
+            console.info(tagSrv + data );
         });
 
         serverProcess.stderr.on('data', function(data) {
@@ -39,7 +39,7 @@ module.exports.startServer = function() {
             }
             serverProcess = null;
         });
-    }
+    }    
 };
 
 module.exports.stopServer = function() {

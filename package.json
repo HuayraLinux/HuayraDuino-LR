@@ -28,8 +28,7 @@
     "@electron-forge/maker-zip": "^6.0.5",
     "electron": "^23.1.0",
     "electron-rebuild": "^3.2.9",
-    "makensis": "^2.0.5",
-    "serialport": "^10.5.0"
+    "makensis": "^2.0.5"
   },
   "optionalDependencies": {
     "electron-installer-debian": "^3.1.0"
@@ -37,6 +36,7 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "fs-jetpack": "^5.1.0",
-    "rpmbuild": "^0.0.23"
+    "rpmbuild": "^0.0.23",
+    "serialport": "^10.5.0"
   }
 }

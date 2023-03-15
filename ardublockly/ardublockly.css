@@ -225,11 +225,11 @@ body {
 /*  IDE output  */
 /****************/
 .ide_output_wrapper {
-  width: 50%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  /*position: fixed; 
-  bottom: -16px;*/
+  position: fixed; 
+  bottom: -16px;
   z-index: 10;
 }
 

@@ -108,6 +108,7 @@ Ardublockly.ideSendUpload = function() {
     Ardublockly.showExtraIdeButtons(false);
     Ardublockly.setIdeSettings(null, 'upload');
   }
+  
   Ardublockly.shortMessage(Ardublockly.getLocalStr('uploadingSketch'));
   Ardublockly.resetIdeOutputContent();
   Ardublockly.sendCode();
@@ -123,6 +124,8 @@ Ardublockly.ideSendVerify = function() {
   Ardublockly.shortMessage(Ardublockly.getLocalStr('verifyingSketch'));
   Ardublockly.resetIdeOutputContent();
   Ardublockly.sendCode();
+  console.log('save')
+  saveLogSerialPort('/dev/ttyACM0');
 };
 
 /** Sets the Ardublockly server IDE setting to open and sends the code. */
@@ -738,3 +741,21 @@ Ardublockly.bindClick_ = function(el, func) {
   el.addEventListener('ontouchend', propagateOnce);
   el.addEventListener('click', propagateOnce);
 };
+
+Ardublockly.getPortData = function () {
+  console.log('estoy pasando por aca')
+  var el = document.getElementById("button_savelog");
+  
+  /*
+  var el = document.getElementById("button_savelog");
+  if (el.checked == true )
+    {
+      el.checked = false;
+    }
+  else
+    {
+    el.checked = true;
+    }
+    
+  console.log(el.checked) */
+}
