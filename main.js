@@ -31,7 +31,7 @@ var mainWindow = null;
 
 // Set up the app data directory within the Ardublockly home directory
 (function setAppData() {
-    var appDataPath = jetpack.dir(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'])
+    var appDataPath = jetpack.dir(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']).cwd('.hdlr-appdata')
     app.setPath('appData', appDataPath.path());
     app.setPath('userData', appDataPath.path());
     app.setPath('cache', appDataPath.path('GenCache'));
