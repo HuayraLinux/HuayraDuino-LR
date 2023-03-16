@@ -157,16 +157,6 @@
 
   <!-- Content -->
   <div class="container">
-    <!-- Switch 
-    <div class="switch">
-      Guardar Salida
-      <label>
-        No
-        <input id="button_savelog" type="checkbox">
-        <span class="lever"></span>
-        Si
-      </label>  
-    </div>-->
     <div class="row">
       <div class="col s12 m12 l8" style="position:relative">
         <!-- Toolbox visibility button -->
@@ -222,7 +212,7 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m12 l4">
+    <div class="col s12 m12 l4">
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
           <li>
             <div class="collapsible-header active">
@@ -242,6 +232,23 @@
               <a class="btn-floating btn-large waves-effect waves-light arduino_teal z-depth-1-half" id="button_load_xml"><i class="mdi-action-extension"></i></a>
               <textarea id="content_xml" class="content content_height_transition content_xml_large" wrap="soft"></textarea>
             </div>
+          </li>
+          <li>
+                <!--<button id="log-output">Test</button>-->
+    <!-- Switch -->
+      
+    <div class="switch" id="switch" >
+      <label>
+      <!--  No-->
+        <input id="log-output" type="checkbox">
+        <span class="lever"></span>
+      <!--
+        Si -->
+      </label>  
+      Guardar Resultados en ~/huayraduino.csv
+    </div>
+
+
           </li>
         </ul>
       </div>
@@ -401,13 +408,25 @@
   <script src="ardublockly_toolbox.js"></script>
   <script src="ardublockly_blockly.js"></script>
   <script src="ardublockly.js"></script>
-    
   <script>
     window.addEventListener('load', function load(event) {
       window.removeEventListener('load', load, false);
       Ardublockly.init();
     });
   </script>
+  <!-- <script type="module" src='./testipc.js'></script> -->
+  <script>
+    window.api.receive("fromMain", (data) => {
+        console.log(`Received ${data} from main process`);
+    });
+    /* window.api.send("toMain", "some data"); */
+</script>
+<script>
+    var logOutput = document.getElementById('log-output');
+    logOutput.addEventListener('change', function(){
+       window.api.send("toMain", logOutput.checked); 
+    })
+</script>
   <script src="./splashscreen.js"></script>
 </body>
 </html>

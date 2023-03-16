@@ -108,7 +108,6 @@ Ardublockly.ideSendUpload = function() {
     Ardublockly.showExtraIdeButtons(false);
     Ardublockly.setIdeSettings(null, 'upload');
   }
-  
   Ardublockly.shortMessage(Ardublockly.getLocalStr('uploadingSketch'));
   Ardublockly.resetIdeOutputContent();
   Ardublockly.sendCode();
@@ -124,8 +123,6 @@ Ardublockly.ideSendVerify = function() {
   Ardublockly.shortMessage(Ardublockly.getLocalStr('verifyingSketch'));
   Ardublockly.resetIdeOutputContent();
   Ardublockly.sendCode();
-  console.log('save')
-  saveLogSerialPort('/dev/ttyACM0');
 };
 
 /** Sets the Ardublockly server IDE setting to open and sends the code. */
@@ -485,6 +482,15 @@ Ardublockly.setIdeSettings = function(e, preset) {
  * message from server).
  */
 Ardublockly.sendCode = function() {
+  var logActive = false;
+  var logOutput = document.getElementById('log-output');
+  var event = new Event('change');
+  if (logOutput.checked == true)
+    {
+      logActive = true;
+      logOutput.checked = false;
+      logOutput.dispatchEvent(event);
+    }
   Ardublockly.largeIdeButtonSpinner(true);
   /**
    * Receives the IDE data back to be displayed and stops spinner.
@@ -500,6 +506,11 @@ Ardublockly.sendCode = function() {
     console.log('DataBack')
     console.log(dataBack)
     Ardublockly.arduinoIdeOutput(dataBack);
+    if ( logActive )
+    {
+      logOutput.checked = true;
+      logOutput.dispatchEvent(event);
+    }
   };
 
   console.log('Sending Sketch To Server')

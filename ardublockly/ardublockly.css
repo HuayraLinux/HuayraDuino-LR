@@ -118,6 +118,15 @@ body {
   }
 }
 
+.switch {
+  display: block;
+  min-height: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
 /************************************/
 /*  Blocks, Arduino, and XML areas  */
 /************************************/
@@ -170,13 +179,20 @@ body {
   font-size: smaller;
   overflow: scroll;
   font-style: 0.2em !important;
-  min-height: 384px;
+  min-height: 184px; /* 384 */
 }
 .content_xml_large {
-  height: -moz-calc(100vh - 286px);     /* Firefox  */
-  height: -webkit-calc(100vh - 286px);  /* WebKit   */
-  height: -o-calc(100vh - 286px);       /* Opera    */
-  height: calc(100vh - 286px);          /* Standard */
+  height: -moz-calc(78vh - 188px);     /* Firefox  */
+  height: -webkit-calc(78vh - 188px);  /* WebKit   */
+  height: -o-calc(78vh - 188px);       /* Opera    */
+  height: calc(78vh - 188px);          /* Standard */
+  /*
+  height: -moz-calc(100vh - 286px);     // Firefox  
+  height: -webkit-calc(100vh - 286px);  // WebKit   
+  height: -o-calc(100vh - 286px);       // Opera    
+  height: calc(100vh - 286px);          // Standard 
+  */
+
 }
 .content_xml_small {
   height: -moz-calc(100vh - 446px);     /* Firefox  */
@@ -200,13 +216,19 @@ body {
   -webkit-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  min-height: 388px;
+  min-height: 188px; /*388*/
 }
 .content_arduino_large {
-  height: -moz-calc(100vh - 280px);     /* Firefox  */
-  height: -webkit-calc(100vh - 280px);  /* WebKit   */
-  height: -o-calc(100vh - 280px);       /* Opera    */
-  height: calc(100vh - 280px);          /* Standard */
+  height: -moz-calc(78vh - 180px);     /* Firefox  */
+  height: -webkit-calc(78vh - 180px);  /* WebKit   */
+  height: -o-calc(78vh - 180px);       /* Opera    */
+  height: calc(78vh - 180px);          /* Standard */
+  /*
+  height: -moz-calc(100vh - 280px);     /* Firefox  
+  height: -webkit-calc(100vh - 280px);  /* WebKit   
+  height: -o-calc(100vh - 280px);       /* Opera    
+  height: calc(100vh - 280px);          /* Standard 
+  */
 }
 .content_arduino_small {
   height: -moz-calc(100vh - 440px);     /* Firefox  */

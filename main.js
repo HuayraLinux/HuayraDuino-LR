@@ -11,6 +11,8 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const Menu = electron.Menu;
+const fs = require('fs')
+const { ipcMain } = require("electron");
 
 const server = require('./electron/servermgr.js');
 const projectLocator = require('./electron/projectlocator.js');
@@ -80,8 +82,14 @@ function setMainMenu() {
 // Electron application entry point
 app.on('ready', function() {
     server.startServer();
-    mainWindow = new BrowserWindow({width: 1000, height: 700}) 
-    mainWindow.menuBarVisible = true
+    mainWindow = new BrowserWindow({width: 1000, height: 700, 
+        webPreferences: {
+            nodeIntegration: false, // is default value after Electron v5
+            contextIsolation: true, // protect against prototype pollution
+            enableRemoteModule: false, // turn off remote
+            preload: path.join(__dirname, "preload.js") // use a preload script
+          }})
+    mainWindow.menuBarVisible = false
     mainWindow.type = 'desktop'
     mainWindow.title = 'HuayraDuino'
     mainWindow.minWidth = 530
@@ -89,7 +97,7 @@ app.on('ready', function() {
     mainWindow.resizable = true 
     mainWindow.icon = path.join(__dirname, './favicon.png')
     //mainWindow.webContents.session.clearCache()
-    setMainMenu();
+    //setMainMenu();
  
     mainWindow.webContents.on('did-fail-load',
         function(event, errorCode, errorDescription) {
@@ -141,3 +149,24 @@ app.on('window-all-closed', function() {
     saveLog.stopLog();
     app.quit();
 });
+
+ipcMain.on("toMain", (event, args) => {
+    //console.log(args)
+    if( args == true)
+    {
+      saveLog.startLog();
+      //console.log('start logging')
+    }
+    else{
+      saveLog.stopLog();
+      //console.log('stop logging')
+    }
+    /*
+    fs.readFile("preload.js", (error, data) => {
+      // Do something with file contents
+    
+      // Send result back to renderer process
+      mainWindow.webContents.send("fromMain", data);
+    });
+    */
+  });
