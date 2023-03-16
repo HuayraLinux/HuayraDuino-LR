@@ -62,9 +62,9 @@ module.exports.startLog = function () {
         
         // Read the port data
         logProcess.on("open", function () {
-            parser.on('data', (data) => {       
-                console.log(data)
-                fs.writeSync(log, data + '\n')
+            parser.on('data', (data) => {
+                var today = new Date();
+                fs.writeSync(log, today.toLocaleString() + ',' + data + '\n')
             });
         });
     }
