@@ -196,6 +196,7 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="stepper_config">' +
 '      <field name="STEPPER_PIN1">1</field>' +
 '      <field name="STEPPER_PIN2">2</field>' +
+'      <field name="STEPPER_PIN3">3</field>' +
 '      <value name="STEPPER_STEPS">' +
 '        <block type="math_number">' +
 '          <field name="NUM">100</field>' +
@@ -223,6 +224,15 @@ Ardublockly.TOOLBOX_XML =
 '      <value name="TEXT">' +
 '        <block type="text"></block>' +
 '      </value>' +
+'    </block>' +
+'    <block type="DS18B20_config">' +
+'      <field name="DS18B20_NAME">ds</field>' +
+'      <field name="DS18B20_PIN">2</field>' +
+'      <field name="DS18B20_ADDRESS">direccion</field>' +
+'    </block>' +
+'    <block type="DS18B20_temp_C">' +
+'    </block>' +
+'    <block type="DS18B20_temp_F">' +
 '    </block>' +
 '    <block type="spi_setup"></block>' +
 '    <block type="spi_transfer"></block>' +

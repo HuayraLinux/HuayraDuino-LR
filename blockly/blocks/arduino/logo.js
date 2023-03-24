@@ -45,7 +45,7 @@ Blockly.Blocks.logo.HUE = 180;
 Blockly.Blocks['ardublockly_name_top'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Huayra Super Arduino clocky megadrdrive huayra dije huayra???");
+        .appendField("Ardublockly");
     this.setPreviousStatement(true);
     this.setColour(Blockly.Blocks.logo.HUE);
   }
@@ -54,7 +54,7 @@ Blockly.Blocks['ardublockly_name_top'] = {
 Blockly.Blocks['ardublockly_name_bottom'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("Huayra Super Arduino clocky megadrdrive huayra dije huayra???");
+        .appendField("Ardublockly");
     this.setNextStatement(true);
     this.setColour(Blockly.Blocks.logo.HUE);
     this.setTooltip('');
