@@ -226,9 +226,9 @@ Ardublockly.TOOLBOX_XML =
 '      </value>' +
 '    </block>' +
 '    <block type="DS18B20_config">' +
-'      <field name="DS18B20_NAME">ds</field>' +
+'      <field name="DS18B20_NAME">ds_1</field>' +
 '      <field name="DS18B20_PIN">2</field>' +
-'      <field name="DS18B20_ADDRESS">direccion</field>' +
+'      <field name="DS18B20_ADDRESS">direccion_1</field>' +
 '    </block>' +
 '    <block type="DS18B20_temp_C">' +
 '    </block>' +

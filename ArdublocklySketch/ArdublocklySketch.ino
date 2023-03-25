@@ -1,25 +1,31 @@
 // Ardublockly generated sketch
 #include <DS18B20.h>
 
-uint8_t direccion[8];
+float i;
+float k;
+String m;
+String n;
 uint8_t direccion_3[8];
+uint8_t direccion_4[8];
 
-DS18B20 ds(2);
-DS18B20 ds_3(3);
+DS18B20 ds_1(2);
+DS18B20 ds_2(3);
 
 void setup() {
   Serial.begin(9600);
-  ds.selectNext();
-  ds.getAddress(direccion);
-  ds_3.selectNext();
-  ds_3.getAddress(direccion_3);
+  ds_1.selectNext();
+  ds_1.getAddress(direccion_3);
+  ds_2.selectNext();
+  ds_2.getAddress(direccion_4);
 }
 
 void loop() {
-  Serial.println(ds.getTempF());
-  Serial.println(ds.getTempF());
-  Serial.println(ds.getTempC());
-  Serial.println(ds.getTempC());
+  i = ds_1.getTempC();
+  k = ds_2.getTempC();
+
+  m = String("DS_1,") + String(i);
+  n = String(",DS_2,") + String(k);
+  Serial.println((String(m) + String(n)));
   delay(5000);
 
 }

@@ -28,16 +28,28 @@ Blockly.Blocks['DS18B20_config'] = {
    * an object instance and setting up the speed. Info in the setHelpUrl link.
    * @this Blockly.Block
    */
+
+
   init: function() {
+    var DS_NAMES =
+     [['ds_1', 'ds_1'],
+      ['ds_2', 'ds_2'],
+      ['ds_3', 'ds_3'],  
+      ['ds_4', 'ds_4']];
+
+
     this.setHelpUrl('https://github.com/matmunk/DS18B20');
     this.setColour(Blockly.Blocks.DS18B20.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_DS18B20_SETUP)
+        .appendField(new Blockly.FieldDropdown(DS_NAMES), 'DS18B20_NAME');
+        /*
         .appendField(
             new Blockly.FieldInstance('DS18B20',
                                       Blockly.Msg.ARD_DS18B20_DEFAULT_NAME,
-                                      true, true, true),
-            'DS18B20_NAME');
+                                      false, false, false),
+            'DS18B20_NAME');*/
+    
     this.appendDummyInput()
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField(Blockly.Msg.ARD_DS18B20_ADDRESS)
@@ -45,7 +57,7 @@ Blockly.Blocks['DS18B20_config'] = {
                 new Blockly.FieldInstance('DS18B20_ADDRESS',
                                           Blockly.Msg.ARD_DS18B20_ADDRESS,
                                           true, true, true),
-                'DS18B20_ADDRESS');
+                'DS18B20_ADDRESS'); 
     this.appendDummyInput()
                 .setAlign(Blockly.ALIGN_RIGHT)
                 .appendField(Blockly.Msg.ARD_DS18B20_PIN)
@@ -108,23 +120,30 @@ Blockly.Blocks['DS18B20_temp_C'] = {
    * @this Blockly.Block
    */
   init: function() {
+    var DS_NAMES =
+     [['ds_1', 'ds_1'],
+      ['ds_2', 'ds_2'],
+      ['ds_3', 'ds_3'],  
+      ['ds_4', 'ds_4']];
     this.setHelpUrl('https://github.com/matmunk/DS18B20');
     this.setColour(Blockly.Blocks.DS18B20.HUE);
     this.appendDummyInput()
          .appendField(Blockly.Msg.ARD_DS18B20_TEMPERATURE_C)
+         .appendField(new Blockly.FieldDropdown(DS_NAMES), 'DS18B20_NAME');
+         /*
          .appendField(
           new Blockly.FieldInstance('DS18B20',
                                     Blockly.Msg.ARD_DS18B20_DEFAULT_NAME,
                                     false, true, false),
-          'DS18B20_NAME');
-    this.setOutput(true, Blockly.Types.NUMBER.output);
+          'DS18B20_NAME');*/
+    this.setOutput(true, Blockly.Types.DECIMAL.output);
   },
     /**
      * Should be a long (32bit), but  for for now an int.
      * @return {string} The type of return value for the block, an integer.
      */
     getBlockType: function() {
-      return Blockly.Types.NUMBER;
+      return Blockly.Types.DECIMAL;
   },
   /**
    * Called whenever anything on the workspace changes.
@@ -154,23 +173,30 @@ Blockly.Blocks['DS18B20_temp_F'] = {
    * @this Blockly.Block
    */
   init: function() {
+    var DS_NAMES =
+     [['ds_1', 'ds_1'],
+      ['ds_2', 'ds_2'],
+      ['ds_3', 'ds_3'],  
+      ['ds_4', 'ds_4']];
     this.setHelpUrl('https://github.com/matmunk/DS18B20');
     this.setColour(Blockly.Blocks.DS18B20.HUE);
     this.appendDummyInput()
          .appendField(Blockly.Msg.ARD_DS18B20_TEMPERATURE_F)
+         .appendField(new Blockly.FieldDropdown(DS_NAMES), 'DS18B20_NAME');
+         /*
          .appendField(
           new Blockly.FieldInstance('DS18B20',
                                     Blockly.Msg.ARD_DS18B20_DEFAULT_NAME,
                                     false, true, false),
-          'DS18B20_NAME');
-    this.setOutput(true, Blockly.Types.NUMBER.output);
+          'DS18B20_NAME');*/
+    this.setOutput(true, Blockly.Types.DECIMAL.output);
   },
     /**
      * Should be a long (32bit), but  for for now an int.
      * @return {string} The type of return value for the block, an integer.
      */
     getBlockType: function() {
-      return Blockly.Types.NUMBER;
+      return Blockly.Types.DECIMAL;
   },
   /**
    * Called whenever anything on the workspace changes.

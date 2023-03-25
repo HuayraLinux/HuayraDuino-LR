@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "carlosperate",
-		"lastupdated": "2023-03-24 19:33:54.032394",
+		"lastupdated": "2023-03-25 09:34:03.848114",
 		"locale": "en",
 		"messagedocumentation" : "qqq_ardublockly"
 	},
@@ -94,7 +94,7 @@
 	"ARD_STEPPER_STEP_TIP": "Turns the stepper motor a specific number of steps.",
 	"ARD_STEPPER_COMPONENT": "stepper",
 	"ARD_DS18B20_SETUP": "Configurar Sensor tipo DS18B20",
-	"ARD_DS18B20_DEFAULT_NAME": "ds",
+	"ARD_DS18B20_DEFAULT_NAME": "ds_1",
 	"ARD_DS18B20_PIN": "Pin",
 	"ARD_DS18B20_ADDRESS_1": "direccion_1#",
 	"ARD_DS18B20_ADDRESS_2": "direccion_2#",
