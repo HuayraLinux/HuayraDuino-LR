@@ -36,7 +36,7 @@ function parseINIString(data){
     return value;
 }
 
-module.exports.startLog = function () {
+module.exports.startLog = function (mainWindow) {
     if (logProcess === null) 
         {
         const parser = new ReadlineParser()
@@ -65,6 +65,13 @@ module.exports.startLog = function () {
             parser.on('data', (data) => {
                 var today = new Date();
                 fs.writeSync(log, today.toLocaleString() + ',' + data + '\n')
+                console.log(today.toLocaleString() + ',' + data)
+                fs.readFile("preload.js", (error, dataLoad) => {
+                    // Do something with file contents
+                    
+                    // Send result back to renderer process
+                    mainWindow.webContents.send("fromMain", today.toLocaleString() + ',' + data);
+                })
             });
         });
     }

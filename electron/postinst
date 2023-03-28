@@ -1,0 +1,8 @@
+#! /bin/sh
+
+chmod -R 666 /usr/lib/huayraduino-lr/*.ini
+chmod 777 /usr/lib/huayraduino-lr/resources/app/ArdublocklySketch
+chmod 666 /usr/lib/huayraduino-lr/resources/app/ArdublocklySketch/* 
+ 
+exit 0
+#DEBHELPER#

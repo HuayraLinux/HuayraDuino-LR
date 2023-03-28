@@ -151,10 +151,11 @@ app.on('window-all-closed', function() {
 });
 
 ipcMain.on("toMain", (event, args) => {
+    //var dataLog = '';
     //console.log(args)
     if( args == true)
     {
-      saveLog.startLog();
+      saveLog.startLog(mainWindow);
       //console.log('start logging')
     }
     else{
@@ -164,9 +165,10 @@ ipcMain.on("toMain", (event, args) => {
     /*
     fs.readFile("preload.js", (error, data) => {
       // Do something with file contents
-    
+      
       // Send result back to renderer process
-      mainWindow.webContents.send("fromMain", data);
+      console.log('pase por el preload')
+      mainWindow.webContents.send("fromMain", dataLog);
     });
     */
   });

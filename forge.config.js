@@ -14,7 +14,10 @@ module.exports = {
       name: '@electron-forge/maker-deb',
       config: {
         options: {
-          icon: 'ardublockly/img/HuayraDuino_icono.png'
+          icon: 'ardublockly/img/HuayraDuino_icono.png',
+          scripts: {
+            postinst: 'electron/postinst'
+          }
         }},
     },
     {

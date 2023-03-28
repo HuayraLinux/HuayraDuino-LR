@@ -15,12 +15,12 @@
   <link rel="stylesheet" href="prettify/arduino.css">
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
 
-  <!-- Ardublockly - These three files contain the compress version 
+  <!-- Ardublockly - These three files contain the compress version -->
   <script src="../blockly/blockly_uncompressed.js"></script>
   <script src="../blockly/blocks_compressed.js"></script>
-  <script src="../blockly/arduino_compressed.js"></script> -->
+  <script src="../blockly/arduino_compressed.js"></script> 
 
-  <!-- To use the uncompressed version comment out the above and comment in the ones below -->
+  <!-- To use the uncompressed version comment out the above and comment in the ones below
   
   <script src="../blockly/blockly_uncompressed.js"></script>
   <script src="../blockly/blocks/logic.js"></script>
@@ -60,7 +60,7 @@
   <script src="../blockly/generators/arduino/time.js"></script>
   <script src="../blockly/generators/arduino/tone.js"></script>
   <script src="../blockly/generators/arduino/variables.js"></script>
- <!-- -->
+ -->
 
   <!-- Default language js files, user selection appended to head on load -->
   <script src="../blockly/msg/js/es.js"></script>
@@ -414,7 +414,22 @@
   <!-- <script type="module" src='./testipc.js'></script> -->
   <script>
     window.api.receive("fromMain", (data) => {
-        console.log(`Received ${data} from main process`);
+        var ideOuputContent = document.getElementById('content_ide_output');
+        
+        var outputHeader = document.getElementById('ide_output_collapsible_header');
+        if ( !outputHeader.className.match('active') )
+           outputHeader.click();
+        
+        //const colors = ['#62AEB2', '#0094ff', '#ffffff'];
+        const colors = ['orange', 'white', 'yellow'];
+        const i = Math.floor(Math.random() * 3);
+        var color = colors[i]; //'#'+(Math.random()*0xFFFFFF<<0).toString(16);
+        var styleColor = `style="color: ${color}" `
+        //ideOutputContent.style.color = color;
+        ideOuputContent.innerHTML = '';
+        console.log(styleColor)
+        ideOuputContent.innerHTML = `<p ${styleColor}> ${data}</p>`;
+        //console.log(`Received ${data} from main process`);
     });
     /* window.api.send("toMain", "some data"); */
 </script>
