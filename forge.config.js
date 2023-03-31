@@ -4,7 +4,13 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        options: {
+          iconUrl: 'ardublockly/img/HuayraDuino_icono.ico',
+          appDirectory: './',
+          outputDirectory: 'out/win/',
+          authors: "huayra developers",
+        }},
     },
     {
       name: '@electron-forge/maker-zip',
