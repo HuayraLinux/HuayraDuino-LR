@@ -7,6 +7,7 @@
   "scripts": {
     "start": "ENV=dev electron .",
     "forge-start": "ENV=dev electron-forge start",
+    "release": "npm version patch && git push origin $(git rev-parse --abbrev-ref HEAD) && git push origin --tags",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "make:win32": "electron-forge make --platform=win32"
@@ -14,6 +15,21 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HuayraLinux/HuayraDuino-LR.git"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "section": [
+              "electronics",
+              "devel"
+            ]
+          }
+        }
+      ]
+    }
   },
   "keywords": [],
   "license": "ISC",
