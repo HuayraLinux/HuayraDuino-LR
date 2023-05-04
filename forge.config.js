@@ -21,10 +21,16 @@ module.exports = {
       config: {
         options: {
           icon: 'ardublockly/img/HuayraDuino_icono.png',
+          desktopTemplate: 'debian/huayra-duino-lr.desktop',
+          section: [
+            "electronics",
+            "devel"
+          ],
           scripts: {
             postinst: 'electron/postinst'
           }
-        }},
+        },
+      }
     },
     {
       name: '@electron-forge/maker-rpm',
