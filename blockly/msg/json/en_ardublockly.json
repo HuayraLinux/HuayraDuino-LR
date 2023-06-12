@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "carlosperate",
-		"lastupdated": "2023-03-25 09:34:03.848114",
+		"lastupdated": "2023-06-12 10:34:15.375337",
 		"locale": "en",
 		"messagedocumentation" : "qqq_ardublockly"
 	},
@@ -25,7 +25,7 @@
 	"ARD_HIGHLOW_TIP": "Set a pin state logic High or Low.",
 	"ARD_DIGITALREAD": "read digital pin#",
 	"ARD_DIGITALREAD_TIP": "Read digital value on a pin: HIGH or LOW",
-	"ARD_DIGITALWRITE": "set digitial pin#",
+	"ARD_DIGITALWRITE": "set digital pin#",
 	"ARD_WRITE_TO": "to",
 	"ARD_DIGITALWRITE_TIP": "Write digital value HIGH or LOW to a specific Port",
 	"ARD_BUILTIN_LED": "set built-in LED",
@@ -93,7 +93,7 @@
 	"ARD_STEPPER_STEPS": "steps",
 	"ARD_STEPPER_STEP_TIP": "Turns the stepper motor a specific number of steps.",
 	"ARD_STEPPER_COMPONENT": "stepper",
-	"ARD_DS18B20_SETUP": "Configurar Sensor tipo DS18B20",
+	"ARD_DS18B20_SETUP": "Config Sensor type DS18B20",
 	"ARD_DS18B20_DEFAULT_NAME": "ds_1",
 	"ARD_DS18B20_PIN": "Pin",
 	"ARD_DS18B20_ADDRESS_1": "direccion_1#",

@@ -68,7 +68,7 @@ Blockly.Msg.ARD_ANALOGWRITE_TIP = 'Write analog value between 0 and 255 to a spe
 Blockly.Msg.ARD_HIGHLOW_TIP = 'Set a pin state logic High or Low.';
 Blockly.Msg.ARD_DIGITALREAD = 'read digital pin#';
 Blockly.Msg.ARD_DIGITALREAD_TIP = 'Read digital value on a pin: HIGH or LOW';
-Blockly.Msg.ARD_DIGITALWRITE = 'set digitial pin#';
+Blockly.Msg.ARD_DIGITALWRITE = 'set digital pin#';
 Blockly.Msg.ARD_WRITE_TO = 'to';
 Blockly.Msg.ARD_DIGITALWRITE_TIP = 'Write digital value HIGH or LOW to a specific Port';
 Blockly.Msg.ARD_BUILTIN_LED = 'set built-in LED';
@@ -137,7 +137,7 @@ Blockly.Msg.ARD_STEPPER_STEPS = 'steps';
 Blockly.Msg.ARD_STEPPER_STEP_TIP = 'Turns the stepper motor a specific number of steps.';
 Blockly.Msg.ARD_STEPPER_COMPONENT = 'stepper';
 
-Blockly.Msg.ARD_DS18B20_SETUP = 'Configurar Sensor tipo DS18B20';
+Blockly.Msg.ARD_DS18B20_SETUP = 'Config Sensor type DS18B20';
 Blockly.Msg.ARD_DS18B20_DEFAULT_NAME = 'ds_1';
 Blockly.Msg.ARD_DS18B20_PIN = 'Pin';
 /*
