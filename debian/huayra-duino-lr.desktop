@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Huayra Duino [La Rioja]
-Comment=Huayra Duino [La Rioja]
-Exec=/usr/bin/huayra-duino
+Name=Huayra Duino - La Rioja
+Comment=Huayra Duino - La Rioja
+Exec=/usr/bin/huayra-duino-lr
 Terminal=false
 Type=Application
 Icon=huayra-duino-lr

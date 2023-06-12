@@ -1,0 +1,104 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="7R5Qzs682z?c#])SXOny" x="126" y="-389">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="DS18B20_config" id="hv)D*CoD`rF?hIcKUMlz" x="126" y="-362">
+    <field name="DS18B20_NAME">ds_1</field>
+    <field name="DS18B20_ADDRESS">direccion_3</field>
+    <field name="DS18B20_PIN">2</field>
+  </block>
+  <block type="DS18B20_config" id="7#zwmEd7=4FO/0DsJ*3W" x="125" y="-282">
+    <field name="DS18B20_NAME">ds_2</field>
+    <field name="DS18B20_ADDRESS">direccion_4</field>
+    <field name="DS18B20_PIN">3</field>
+  </block>
+  <block type="variables_set" id="@pM~9iQl[rw)nqH?vSGF" x="123" y="-201">
+    <field name="VAR">i</field>
+    <value name="VALUE">
+      <block type="DS18B20_temp_C" id="8@YPJ*G4|i:oL*h9zV/7">
+        <field name="DS18B20_NAME">ds_1</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="MF#qD*GYq0|m#9dfOc6T">
+        <field name="VAR">k</field>
+        <value name="VALUE">
+          <block type="DS18B20_temp_C" id="p^^M7|93PjLTqKE#ancW">
+            <field name="DS18B20_NAME">ds_2</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="%NuSf1D*b(4(RPnX4c}:">
+            <field name="VAR">m</field>
+            <value name="VALUE">
+              <block type="text_join" id="snc*fN~/(5??p{=U^ZK{">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="gBB/}k};^M80q6tK)1g!">
+                    <field name="TEXT">DS_1,</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="variables_get" id="lj{ZgSc3i@aMHO*m/RL|">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="vx,QZm@{`4F1s8]csM.B">
+                <field name="VAR">n</field>
+                <value name="VALUE">
+                  <block type="text_join" id="clGCKt8/DajS(N|/(#g1">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="2zWURopX_;d}]P!#=dRX">
+                        <field name="TEXT">,DS_2,</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get" id="NyYe1N*d0VnGjd6PJ[P^">
+                        <field name="VAR">k</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_print" id="zM^Dq[E*mAtv@_!6+k!a">
+                    <field name="SERIAL_ID">Serial</field>
+                    <field name="NEW_LINE">TRUE</field>
+                    <value name="CONTENT">
+                      <block type="text_join" id="Kx=MF?lc-uUj_:2knldB">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="variables_get" id="w#8Di0GUp=5W[X.@@P3F">
+                            <field name="VAR">m</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="variables_get" id="d63-n8(d-M5/vE-QXh|i">
+                            <field name="VAR">n</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="time_delay" id="450">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="451">
+                            <field name="NUM">5000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

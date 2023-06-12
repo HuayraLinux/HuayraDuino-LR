@@ -1,2 +1,7 @@
 ServerCompilerSettings.ini
 *.log
+node_modules
+out/
+blockly/appengine
+blockly/demos
+closure-library/

@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/HuayraLinux/HuayraDuino-LR.git
 Package: huayra-duino-lr
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, arduino-installer (>= 1.1)
-Description: HuayraDuino LR (La Rioja)
+Description: Huayra Duino - La Rioja
  Es un entorno de programacin visual para Arduino. Est basado en Blockly, 
  con modificaciones para poder generar cdigo Arduino.
  .

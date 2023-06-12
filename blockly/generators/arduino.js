@@ -71,6 +71,7 @@ Blockly.Arduino.PinTypes = {
   PWM: 'PWM',
   SERVO: 'SERVO',
   STEPPER: 'STEPPER',
+  DS18B20: 'DS18B20',
   SERIAL: 'SERIAL',
   I2C: 'I2C/TWI',
   SPI: 'SPI'

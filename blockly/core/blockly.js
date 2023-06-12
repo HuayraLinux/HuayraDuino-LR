@@ -53,6 +53,9 @@ goog.require('Blockly.inject');
 goog.require('Blockly.utils');
 goog.require('goog.color');
 goog.require('goog.userAgent');
+goog.require('goog.debug.ErrorHandler');
+goog.require('goog.events.EventWrapper');
+goog.require('goog.events.EventLike');
 
 
 // Turn off debugging when compiled.
