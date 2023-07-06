@@ -238,4 +238,39 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
+'  <sep></sep>' +
+'  <category id="makeBlock" name="MakeBlocks">' +
+'    <block type="megaPi_stepper_config">' +
+'      <field name="MEGAPI_STEPPER_SLOT">1</field>' +
+'      <value name="MEGAPI_STEPPER_STEPS">' +
+'        <block type="math_number">' +
+'          <field name="NUM">16</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_STEPPER_SPEED">' +
+'        <block type="math_number">' +
+'          <field name="NUM">1000</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_STEPPER_ACCELERATION">' +
+'        <block type="math_number">' +
+'          <field name="NUM">2000</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_stepper_stepTo">' +
+'      <value name="MEGAPI_STEPPER_STEPS_TO">' +
+'        <block type="math_number">' +
+'          <field name="NUM">10</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_stepper_step">' +
+'      <value name="MEGAPI_STEPPER_STEPS">' +
+'        <block type="math_number">' +
+'          <field name="NUM">10</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'  </category>' +
 '</xml>';

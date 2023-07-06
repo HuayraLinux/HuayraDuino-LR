@@ -137,6 +137,21 @@ Blockly.Msg.ARD_STEPPER_STEPS = 'steps';
 Blockly.Msg.ARD_STEPPER_STEP_TIP = 'Turns the stepper motor a specific number of steps.';
 Blockly.Msg.ARD_STEPPER_COMPONENT = 'stepper';
 
+Blockly.Msg.ARD_MEGAPI_STEPPER_SETUP = 'Setup MegaPi stepper motor';
+Blockly.Msg.ARD_MEGAPI_STEPPER_MOTOR = 'MegaPi stepper motor:';
+Blockly.Msg.ARD_MEGAPI_STEPPER_DEFAULT_NAME = 'MyMegaPiStepper';
+Blockly.Msg.ARD_MEGAPI_STEPPER_SLOT = 'slot#';
+Blockly.Msg.ARD_MEGAPI_STEPPER_REVOLVS = 'how many steps per revolution';
+Blockly.Msg.ARD_MEGAPI_STEPPER_SPEED = 'set speed (rpm) to';
+Blockly.Msg.ARD_MEGAPI_STEPPER_ACCELERATION = 'set speed (rpm) to';
+Blockly.Msg.ARD_MEGAPI_STEPPER_SETUP_TIP = 'Configures a MegaPi stepper motor pinout and other settings.';
+Blockly.Msg.ARD_MEGAPI_STEPPER_STEP = 'move MegaPi stepper';
+Blockly.Msg.ARD_MEGAPI_STEPPER_STEP_TO = 'move to MegaPi stepper';
+Blockly.Msg.ARD_MEGAPI_STEPPER_STEPS = 'steps';
+Blockly.Msg.ARD_MEGAPI_STEPPER_STEP_TIP = 'Turns the MegaPi stepper motor a specific number of steps.';
+Blockly.Msg.ARD_MEGAPI_STEPPER_COMPONENT = 'MegaPi stepper';
+
+
 Blockly.Msg.ARD_DS18B20_SETUP = 'Config Sensor type DS18B20';
 Blockly.Msg.ARD_DS18B20_DEFAULT_NAME = 'ds_1';
 Blockly.Msg.ARD_DS18B20_PIN = 'Pin';
