@@ -33,6 +33,7 @@ Blockly.Blocks['megaPi_stepper_config'] = {
     this.setColour(Blockly.Blocks.megaPi_stepper.HUE);
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_MEGAPI_STEPPER_SETUP)
+    this.appendDummyInput()
         .appendField(
             new Blockly.FieldInstance('megaPi_Stepper',
                                       Blockly.Msg.ARD_MEGAPI_STEPPER_DEFAULT_NAME,
@@ -154,4 +155,45 @@ Blockly.Blocks['megaPi_stepper_stepTo'] = {
                 '%2', instanceName));
     }
   }
+};
+
+  Blockly.Blocks['megaPi_stepper_run'] = {
+    /**
+     * Block for for the megaPi stepper 'run()' function.
+     * @this Blockly.Block
+     */
+    init: function() {
+      this.setHelpUrl('https://github.com/Makeblock-official/Makeblock-Libraries');
+      this.setColour(Blockly.Blocks.megaPi_stepper.HUE);
+      this.appendDummyInput()
+          .appendField(Blockly.Msg.ARD_MEGAPI_STEPPER_RUN)
+          .appendField(
+              new Blockly.FieldInstance('megaPi_Stepper',
+                                        Blockly.Msg.ARD_MEGAPI_STEPPER_DEFAULT_NAME,
+                                        false, true, false),
+              'MEGAPI_STEPPER_NAME');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(Blockly.Msg.ARD_MEGAPI_STEPPER_RUN_TIP);
+    },
+    /**
+     * Called whenever anything on the workspace changes.
+     * It checks/warns if the selected stepper instance has a config block.
+     * @this Blockly.Block
+     */
+    onchange: function() {
+      if (!this.workspace) return;  // Block has been deleted.
+  
+      var instanceName = this.getFieldValue('MEGAPI_STEPPER_NAME')
+      if (Blockly.Instances.isInstancePresent(instanceName, 'megaPi_Stepper', this)) {
+        this.setWarningText(null);
+      } else {
+        // Set a warning to select a valid stepper config block
+        this.setWarningText(
+          Blockly.Msg.ARD_COMPONENT_WARN1.replace(
+              '%1', Blockly.Msg.ARD_MEGAPI_STEPPER_COMPONENT).replace(
+                  '%2', instanceName));
+      }
+    }
+  
 };

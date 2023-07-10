@@ -93,7 +93,11 @@ Blockly.Msg.ARD_SERIAL_SETUP_TIP = 'Selects the speed for a specific Serial peri
 Blockly.Msg.ARD_SERIAL_PRINT = 'print';
 Blockly.Msg.ARD_SERIAL_PRINT_NEWLINE = 'add new line';
 Blockly.Msg.ARD_SERIAL_PRINT_TIP = 'Prints data to the console/serial port as human-readable ASCII text.';
+Blockly.Msg.ARD_SERIAL_AVAILABLE = 'available to read';
+Blockly.Msg.ARD_SERIAL_AVAILABLE_TIP = 'Returns true if the number of bytes available to read is great zero.';
 Blockly.Msg.ARD_SERIAL_PRINT_WARN = 'A setup block for %1 must be added to the workspace to use this block!';
+Blockly.Msg.ARD_SERIAL_READ = 'Read';
+Blockly.Msg.ARD_SERIAL_READ_TIP = 'Reads a char for a specific Serial peripheral';
 Blockly.Msg.ARD_SERVO_WRITE = 'set SERVO from Pin';
 Blockly.Msg.ARD_SERVO_WRITE_TO = 'to';
 Blockly.Msg.ARD_SERVO_WRITE_DEG_180 = 'Degrees (0~180)';
@@ -143,14 +147,45 @@ Blockly.Msg.ARD_MEGAPI_STEPPER_DEFAULT_NAME = 'MyMegaPiStepper';
 Blockly.Msg.ARD_MEGAPI_STEPPER_SLOT = 'slot#';
 Blockly.Msg.ARD_MEGAPI_STEPPER_REVOLVS = 'how many steps per revolution';
 Blockly.Msg.ARD_MEGAPI_STEPPER_SPEED = 'set speed (rpm) to';
-Blockly.Msg.ARD_MEGAPI_STEPPER_ACCELERATION = 'set speed (rpm) to';
+Blockly.Msg.ARD_MEGAPI_STEPPER_ACCELERATION = 'set acceleration to';
 Blockly.Msg.ARD_MEGAPI_STEPPER_SETUP_TIP = 'Configures a MegaPi stepper motor pinout and other settings.';
 Blockly.Msg.ARD_MEGAPI_STEPPER_STEP = 'move MegaPi stepper';
 Blockly.Msg.ARD_MEGAPI_STEPPER_STEP_TO = 'move to MegaPi stepper';
+Blockly.Msg.ARD_MEGAPI_STEPPER_STEPS_TO = 'steps to';
 Blockly.Msg.ARD_MEGAPI_STEPPER_STEPS = 'steps';
+Blockly.Msg.ARD_MEGAPI_STEPPER_RUN = 'run MegaPi stepper';
+Blockly.Msg.ARD_MEGAPI_STEPPER_RUN_TIP = 'Runs MegaPi stepper statements';
 Blockly.Msg.ARD_MEGAPI_STEPPER_STEP_TIP = 'Turns the MegaPi stepper motor a specific number of steps.';
 Blockly.Msg.ARD_MEGAPI_STEPPER_COMPONENT = 'MegaPi stepper';
 
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_SETUP = 'Setup MegaPi line follower:';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_DEFAULT_NAME = 'MyMegaPiLineFollower';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_PORT = 'port#';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_SETUP_TIP = 'Configures a MegaPi line follower pinout and other settings.';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR = 'Read MegaPi line follower sensors';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_TIP = 'Reads a number for a specific MegaPi line follower peripheral';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_1 = 'S1_IN_S2_IN   = 0x00    sensor1 and sensor2 are both inside of black line';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_2 = 'S1_IN_S2_OUT  = 0x01    sensor1 is inside of black line and sensor2 is outside of black line';
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_3 = 'S1_OUT_S2_IN  = 0x02    sensor1 is outside of black line and sensor2 is inside of black line'; 
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_4 = 'S1_OUT_S2_OUT = 0x03    sensor1 and sensor2 are both outside of black line';
+
+Blockly.Msg.ARD_MEGAPI_ULTRASONIC_SETUP = 'Setup MegaPi ultrasonic:';
+Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DEFAULT_NAME = 'MyMegaPiUltrasonic';
+Blockly.Msg.ARD_MEGAPI_ULTRASONIC_PORT = 'port#';
+Blockly.Msg.ARD_MEGAPI_ULTRASONIC_SETUP_TIP = 'Configures a MegaPi ultrasonic pinout and other settings.';
+Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DISTANCE = 'Distance in Cm MegaPi ultrasonic sensor';
+Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DISTANCE_TIP = 'Reads a distance to an obstacle in cm for a MegaPi ultrasonic sensor';
+
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_SETUP = 'Setup MegaPi DC Motor';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_DEFAULT_NAME = 'MyMegaPiDCMotor';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_PORT = 'port#';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_SPEED = 'to speed';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_SETUP_TIP = 'Configures a MegaPi DC Motor pinout and other settings.';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_RUN = 'run MegaPi DC Motor';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_RUN_TIP = 'Runs MegaPi DC Motor at especific speed';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_STOP = 'stop MegaPi DC Motor';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_STOP_TIP = 'Stops the MegaPi DC Motor.';
+Blockly.Msg.ARD_MEGAPI_DC_MOTOR_COMPONENT = 'MegaPi DC Motor';
 
 Blockly.Msg.ARD_DS18B20_SETUP = 'Config Sensor type DS18B20';
 Blockly.Msg.ARD_DS18B20_DEFAULT_NAME = 'ds_1';

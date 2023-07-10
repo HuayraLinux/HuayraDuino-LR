@@ -128,3 +128,53 @@ Blockly.Blocks['serial_print'] = {
         this, 'SERIAL_ID', 'serial');
   }
 };
+
+Blockly.Blocks['serial_read'] = {
+  /**
+   * Block for reading a char from serial com.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://www.arduino.cc/en/Serial/Read');
+    this.setColour(Blockly.Blocks.serial.HUE);    
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_SERIAL_READ)
+        .appendField(new Blockly.FieldDropdown(
+                Blockly.Arduino.Boards.selected.serial), 'SERIAL_ID')
+    this.setOutput(true, Blockly.Types.CHARACTER.output);
+    this.setTooltip(Blockly.Msg.ARD_SERIAL_READ_TIP);
+  },
+  /** @return {string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.CHARACTER;
+  },
+  /**
+   * Updates the content of the the pin related fields.
+   * @this Blockly.Block
+   */
+  updateFields: function() {
+    Blockly.Arduino.Boards.refreshBlockFieldDropdown(
+        this, 'SERIAL_ID', 'serial');
+  }
+};
+
+Blockly.Blocks['serial_available'] = {
+  /**
+   * Block for creating a serial read available.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://www.arduino.cc/en/Serial/Available');
+    this.setColour(Blockly.Blocks.serial.HUE);    
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldDropdown(
+                Blockly.Arduino.Boards.selected.serial), 'SERIAL_ID')
+        .appendField(Blockly.Msg.ARD_SERIAL_AVAILABLE)
+    this.setOutput(true, Blockly.Types.BOOLEAN.output);
+    this.setTooltip(Blockly.Msg.ARD_SERIAL_AVAILABLE_TIP);
+  },
+  /** @return {!string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.BOOLEAN;
+  }
+};

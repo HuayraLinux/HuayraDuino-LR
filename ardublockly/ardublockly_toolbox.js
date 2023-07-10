@@ -219,6 +219,8 @@ Ardublockly.TOOLBOX_XML =
 '  <sep></sep>' +
 '  <category id="catComms" name="Comms">' +
 '    <block type="serial_setup"></block>' +
+'    <block type="serial_available"></block>' +
+'    <block type="serial_read"></block>' +
 '    <block type="serial_print"></block>' +
 '    <block type="text_prompt_ext">' +
 '      <value name="TEXT">' +
@@ -269,6 +271,34 @@ Ardublockly.TOOLBOX_XML =
 '      <value name="MEGAPI_STEPPER_STEPS">' +
 '        <block type="math_number">' +
 '          <field name="NUM">10</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_stepper_run">' +
+'      <value name="MEGAPI_STEPPER_RUN">' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_line_follower_config">' +
+'      <field name="MEGAPI_LINE_FOLLOWER_PORT">3</field>' +
+'    </block>' +
+'    <block type="megaPi_line_follower_read_sensors"></block>' +
+'    <block type="megaPi_ultrasonic_config">' +
+'      <field name="MEGAPI_ULTRASONIC_PORT">7</field>' +
+'    </block>' +
+'    <block type="megaPi_ultrasonic_distance"></block>' +
+'    <block type="megaPi_dc_motor_config">' +
+'      <field name="MEGAPI_DC_MOTOR_PORT">A1</field>' +
+'    </block>' +
+'    <block type="megaPi_dc_motor_stop">' +
+'      <value name="MEGAPI_DC_MOTOR_STOP">' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_dc_motor_run">' +
+'      <value name="MEGAPI_DC_MOTOR_RUN">' +
+'      </value>' +
+'      <value name="MEGAPI_DC_MOTOR_SPEEDS">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
 '        </block>' +
 '      </value>' +
 '    </block>' +
