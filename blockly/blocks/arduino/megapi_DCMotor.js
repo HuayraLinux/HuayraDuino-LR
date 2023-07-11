@@ -39,7 +39,12 @@ Blockly.Blocks['megaPi_dc_motor_config'] = {
                                       Blockly.Msg.ARD_MEGAPI_DC_MOTOR_DEFAULT_NAME,
                                       true, true, false),
             'MEGAPI_DC_MOTOR_NAME')
-    this.appendDummyInput()
+/*
+#define PORT1A  PORT_1
+#define PORT1B  PORT_9
+#define PORT2A  PORT_2
+#define PORT2B  PORT_10
+    this.appendDummyInput()*/
         .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(Blockly.Msg.ARD_MEGAPI_DC_MOTOR_PORT)
         .appendField(new Blockly.FieldDropdown(
@@ -112,10 +117,9 @@ Blockly.Blocks['megaPi_dc_motor_run'] = {
                                         Blockly.Msg.ARD_MEGAPI_DC_MOTOR_DEFAULT_NAME,
                                         false, true, false),
               'MEGAPI_DC_MOTOR_NAME');
-      this.appendDummyInput()
-          .setAlign(Blockly.ALIGN_RIGHT)    
-          .appendField(Blockly.Msg.ARD_MEGAPI_DC_MOTOR_SPEED);
       this.appendValueInput('MEGAPI_DC_MOTOR_SPEEDS')
+          .setAlign(Blockly.ALIGN_RIGHT)    
+          .appendField(Blockly.Msg.ARD_MEGAPI_DC_MOTOR_SPEED)
           .setCheck(Blockly.Types.NUMBER.checkList)
       this.setPreviousStatement(true);
       this.setNextStatement(true);

@@ -53,10 +53,10 @@ Blockly.Arduino['megaPi_line_follower_read_sensors'] = function(block) {
   var comment = '// ' + Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_1 + '\n'+
                 '// ' + Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_2 + '\n'+
                 '// ' + Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_3 + '\n'+
-                '// ' + Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_4 + '\n';
+                '// ' + Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_4;
 
   var mpStepperName = block.getFieldValue('MEGAPI_LINE_FOLLOWER_NAME');
-  var code = comment + mpStepperName + '.readSensors()';
+  var code = mpStepperName + '.readSensors();\n' + comment;
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
