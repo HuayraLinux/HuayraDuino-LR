@@ -40,7 +40,7 @@ Blockly.Arduino['megaPi_stepper_config'] = function(block) {
   //slotVar is a variable containing the used pins
   Blockly.Arduino.addVariable(mpStepperName, slotVar, true);
 
-  Blockly.Arduino.addInclude('megaPi_Stepper', '#include <MeMegaPi.h>');
+  Blockly.Arduino.addInclude('megaPi', '#include <MeMegaPi.h>');
 
   Blockly.Arduino.addDeclaration(mpStepperName, globalCode);
 

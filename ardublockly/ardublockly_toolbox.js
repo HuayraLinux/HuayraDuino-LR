@@ -302,5 +302,111 @@ Ardublockly.TOOLBOX_XML =
 '        </block>' +
 '      </value>' +
 '    </block>' +
+'    <block type="megaPi_gyro_config">' +
+'    </block>' +
+'    <block type="megaPi_gyro_read_anglex"></block>' +
+'    <block type="megaPi_gyro_read_angley"></block>' +
+'    <block type="megaPi_gyro_read_anglez"></block>' +
+'    <block type="megaPi_encoder_init">' +
+'    </block>'+
+'    <block type="megaPi_encoder_config">' +
+'      <field name="MEGAPI_ENCODER_SLOT">SLOT1</field>' +
+'    </block>'+
+'    <block type="megaPi_encoder_gostraight">' +
+'      <value name="MEGAPI_ENCODER_GO_STRAIGHT">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'      <field name="MEGAPI_ENCODER_GO_STRAIGHT_FOR_BACK"></field>' +
+'    </block>' +
+'    <block type="megaPi_encoder_spin">' +
+'      <field name="MEGAPI_ENCODER_SPIN"></field>' +
+'    </block>' +
+'    <block type="megaPi_encoder_settarpwm">' +
+'      <value name="MEGAPI_ENCODER_SETTARPWM">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_setpulse">' +
+'      <value name="MEGAPI_ENCODER_SETPULSE">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_setmotorpwm">' +
+'      <value name="MEGAPI_ENCODER_SETMOTORPWM">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_setratio">' +
+'      <value name="MEGAPI_ENCODER_SETRATIO">' +
+'        <block type="math_number">' +
+'          <field name="NUM">26.9</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_setpospid">' +
+'      <value name="MEGAPI_ENCODER_SETPOSPID_P">' +
+'        <block type="math_number">' +
+'          <field name="NUM">1.8</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_ENCODER_SETPOSPID_I">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_ENCODER_SETPOSPID_D">' +
+'        <block type="math_number">' +
+'          <field name="NUM">1.2</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_setspeedpid">' +
+'      <value name="MEGAPI_ENCODER_SETSPEEDPID_P">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0.18</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_ENCODER_SETSPEEDPID_I">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_ENCODER_SETSPEEDPID_D">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_runspeed">' +
+'      <value name="MEGAPI_ENCODER_RUNSPEED">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_moveto">' +
+'      <value name="MEGAPI_ENCODER_MOVETO_POS">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="MEGAPI_ENCODER_MOVETO_SPEED">' +
+'        <block type="math_number">' +
+'          <field name="NUM">100</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="megaPi_encoder_getcurpos"></block>' +
+'    <block type="megaPi_encoder_getcurrentspeed"></block>' +
+'    <block type="megaPi_encoder_updatespeed"></block>' +
 '  </category>' +
 '</xml>';
+

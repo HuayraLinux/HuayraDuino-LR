@@ -20,7 +20,7 @@ goog.require('Blockly.Types');
 
 
 /** Common HSV hue for all blocks in this category. */
-Blockly.Blocks.megaPi_ultrasonic.HUE = 80;
+Blockly.Blocks.megaPi_ultrasonic.HUE = 230;
 
 Blockly.Blocks['megaPi_ultrasonic_config'] = {
   /**
@@ -65,6 +65,7 @@ Blockly.Blocks['megaPi_ultrasonic_distance'] = {
     this.setColour(Blockly.Blocks.megaPi_ultrasonic.HUE);    
     this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DISTANCE)
+    this.appendDummyInput()
         .appendField(
           new Blockly.FieldInstance('megaPi_ultrasonic',
                                     Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DEFAULT_NAME,

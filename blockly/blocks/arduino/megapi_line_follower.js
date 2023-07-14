@@ -20,7 +20,7 @@ goog.require('Blockly.Types');
 
 
 /** Common HSV hue for all blocks in this category. */
-Blockly.Blocks.megaPi_line_follower.HUE = 80;
+Blockly.Blocks.megaPi_line_follower.HUE = 150;
 
 Blockly.Blocks['megaPi_line_follower_config'] = {
   /**

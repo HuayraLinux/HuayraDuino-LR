@@ -34,7 +34,7 @@ Blockly.Arduino['megaPi_dc_motor_config'] = function(block) {
   //portVar is a variable containing the used pins
   Blockly.Arduino.addVariable(mpDCMotorName + '_port', portVar, true);
 
-  Blockly.Arduino.addInclude('megaPi_dc_motor', '#include <MeMegaPi.h>');
+  Blockly.Arduino.addInclude('megaPi', '#include <MeMegaPi.h>');
 
   Blockly.Arduino.addDeclaration(mpDCMotorName, globalCode);
 /*

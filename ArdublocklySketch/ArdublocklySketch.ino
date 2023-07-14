@@ -1,40 +1,58 @@
 // Ardublockly generated sketch
 #include <MeMegaPi.h>
 
-int elemento;
-int MiMegaPiMotorDC_port = A1;
-int MiMegaPiMotorDC_2_port = A2;
-int MiMegaPiMotorDC_3_port = A3;
-int MiMegaPiMotorDC_4_port = A4;
+int i;
+int MiMegaPiUltrasonico_port = 7;
 
-MeMegaPiDCMotor MiMegaPiMotorDC(MiMegaPiMotorDC_port);
-MeMegaPiDCMotor MiMegaPiMotorDC_2(MiMegaPiMotorDC_2_port);
-MeMegaPiDCMotor MiMegaPiMotorDC_3(MiMegaPiMotorDC_3_port);
-MeMegaPiDCMotor MiMegaPiMotorDC_4(MiMegaPiMotorDC_4_port);
+MeLineFollower MiMegaPiUltrasonico(MiMegaPiUltrasonico_port);
+MeEncoderOnBoard MiMegaPiEncoder_2(SLOT1);
+void isr_process_MiMegaPiEncoder_2(void)
+{
+  if(digitalRead(MiMegaPiEncoder_2.getPortB()) == 0)
+  {
+    MiMegaPiEncoder_2.pulsePosMinus();
+  }
+  else
+  {
+    MiMegaPiEncoder_2.pulsePosPlus();
+  }
+}
 
-// Describe esta función...
-void moverMotor() {
-  MiMegaPiMotorDC.run(elemento);
-  MiMegaPiMotorDC_2.run(elemento);
-  MiMegaPiMotorDC_3.run(elemento);
-  MiMegaPiMotorDC_4.run(elemento);
-  delay(2000);
-  MiMegaPiMotorDC.stop();
-  MiMegaPiMotorDC_2.stop();
-  MiMegaPiMotorDC_3.stop();
-  MiMegaPiMotorDC_4.stop();
+MeEncoderOnBoard MiMegaPiEncoder_3(SLOT2);
+void isr_process_MiMegaPiEncoder_3(void)
+{
+  if(digitalRead(MiMegaPiEncoder_3.getPortB()) == 0)
+  {
+    MiMegaPiEncoder_3.pulsePosMinus();
+  }
+  else
+  {
+    MiMegaPiEncoder_3.pulsePosPlus();
+  }
 }
 
 
 void setup() {
+  //Set PWM 8KHz
+  TCCR1A = _BV(WGM10);
+  TCCR1B = _BV(CS11) | _BV(WGM12);
+  TCCR2A = _BV(WGM21) | _BV(WGM20);
+  TCCR2B = _BV(CS21);
+  attachInterrupt(MiMegaPiEncoder_2.getIntNum(), isr_process_MiMegaPiEncoder_2, RISING);
+  attachInterrupt(MiMegaPiEncoder_3.getIntNum(), isr_process_MiMegaPiEncoder_3, RISING);
 }
 
 void loop() {
-  elemento = 100;
-  moverMotor();
-  delay(100);
-  elemento = -100;
-  moverMotor();
-  delay(2000);
+  i = MiMegaPiUltrasonico.distanceCm();
+  if (i < 25) {
+    MiMegaPiEncoder_2.setMotorPWM(-100);
+    MiMegaPiEncoder_3.setMotorPWM(-100);
+    delay(4000);
+  } else {
+    MiMegaPiEncoder_2.setMotorPWM(100);
+    MiMegaPiEncoder_3.setMotorPWM(-100);
+  }
+  MiMegaPiEncoder_2.updateSpeed();
+  MiMegaPiEncoder_3.updateSpeed();
 
 }

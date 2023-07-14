@@ -34,7 +34,7 @@ Blockly.Arduino['megaPi_line_follower_config'] = function(block) {
   //portVar is a variable containing the used pins
   Blockly.Arduino.addVariable(mpStepperName, portVar, true);
 
-  Blockly.Arduino.addInclude('megaPi_line_follower', '#include <MeMegaPi.h>');
+  Blockly.Arduino.addInclude('megaPi', '#include <MeMegaPi.h>');
 
   Blockly.Arduino.addDeclaration(mpStepperName, globalCode);
 

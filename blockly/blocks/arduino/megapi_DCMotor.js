@@ -20,7 +20,7 @@ goog.require('Blockly.Types');
 
 
 /** Common HSV hue for all blocks in this category. */
-Blockly.Blocks.megaPi_dc_motor.HUE = 80;
+Blockly.Blocks.megaPi_dc_motor.HUE = 180;
 
 Blockly.Blocks['megaPi_dc_motor_config'] = {
   /**

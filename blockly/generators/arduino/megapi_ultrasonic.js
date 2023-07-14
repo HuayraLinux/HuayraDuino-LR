@@ -29,12 +29,12 @@ Blockly.Arduino['megaPi_ultrasonic_config'] = function(block) {
   var mpStepperName = block.getFieldValue('MEGAPI_ULTRASONIC_NAME');
   var port = [block.getFieldValue('MEGAPI_ULTRASONIC_PORT')];
   var portVar = 'int ' + mpStepperName + '_port = ' + port + ';';
-  var globalCode = 'MeLineFollower ' + mpStepperName + '(' + mpStepperName + '_port);';
+  var globalCode = 'MeUltrasonicSensor ' + mpStepperName + '(' + mpStepperName + '_port);';
   Blockly.Arduino.reservePin(block, port, pinType, 'megaPi_ultrasonic');
   //portVar is a variable containing the used pins
   Blockly.Arduino.addVariable(mpStepperName, portVar, true);
 
-  Blockly.Arduino.addInclude('megaPi_ultrasonic', '#include <MeMegaPi.h>');
+  Blockly.Arduino.addInclude('megaPi', '#include <MeMegaPi.h>');
 
   Blockly.Arduino.addDeclaration(mpStepperName, globalCode);
 
