@@ -38,7 +38,7 @@ Blockly.Blocks['megaPi_encoder_init'] = {
     this.setHelpUrl('https://github.com/Makeblock-official/Makeblock-Libraries');
     this.setColour(Blockly.Blocks.megaPi_encoder.HUE);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_INIT)
+        .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_INIT, 'MEGAPI_ENCODER_NAME_INIT')
     this.setTooltip(Blockly.Msg.ARD_MEGAPI_ENCODER_INIT_TIP);
   },
 };
@@ -53,7 +53,7 @@ Blockly.Blocks['megaPi_encoder_config'] = {
     this.setHelpUrl('https://github.com/Makeblock-official/Makeblock-Libraries');
     this.setColour(Blockly.Blocks.megaPi_encoder.HUE);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_SETUP)
+        .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_SETUP, 'MEGAPI_ENCODER_NAME_CONFIG')
     this.appendDummyInput()
         .appendField(
             new Blockly.FieldInstance('megaPi_encoder',

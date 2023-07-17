@@ -4,7 +4,7 @@
 int i;
 int MiMegaPiUltrasonico_port = 7;
 
-MeLineFollower MiMegaPiUltrasonico(MiMegaPiUltrasonico_port);
+MeUltrasonicSensor MiMegaPiUltrasonico(MiMegaPiUltrasonico_port);
 MeEncoderOnBoard MiMegaPiEncoder_2(SLOT1);
 void isr_process_MiMegaPiEncoder_2(void)
 {
@@ -45,12 +45,16 @@ void setup() {
 void loop() {
   i = MiMegaPiUltrasonico.distanceCm();
   if (i < 25) {
-    MiMegaPiEncoder_2.setMotorPWM(-100);
-    MiMegaPiEncoder_3.setMotorPWM(-100);
+    MiMegaPiEncoder_2.setMotorPwm(100);
+    MiMegaPiEncoder_3.setMotorPwm(100);
     delay(4000);
+    MiMegaPiEncoder_2.updateSpeed();
+    MiMegaPiEncoder_3.updateSpeed();
   } else {
-    MiMegaPiEncoder_2.setMotorPWM(100);
-    MiMegaPiEncoder_3.setMotorPWM(-100);
+    MiMegaPiEncoder_2.setMotorPwm(100);
+    MiMegaPiEncoder_3.setMotorPwm(-100);
+    MiMegaPiEncoder_2.updateSpeed();
+    MiMegaPiEncoder_3.updateSpeed();
   }
   MiMegaPiEncoder_2.updateSpeed();
   MiMegaPiEncoder_3.updateSpeed();

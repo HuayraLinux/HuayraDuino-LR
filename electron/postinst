@@ -1,7 +1,9 @@
 #! /bin/sh
 
+chmod -R 666 /usr/lib/huayra-duino-lr/resources/app/*.ini
 chmod 777 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch
-chmod 666 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch/* 
- 
+chmod 666 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch/*
+cp -R /usr/lib/huayra-duino-lr/resources/app/arduino-libraries/* $HOME/Arduino/libraries/
+
 exit 0
 #DEBHELPER#

@@ -12,9 +12,9 @@ if [ "$1" = "configure" ]; then
 
 fi
 
-chmod -R 666 /opt/huayra-duino-lr/*.ini
-chmod 777 /opt/huayra-duino-lr/ArdublocklySketch
-chmod 666 /opt/huayra-duino-lr/ArdublocklySketch/*
+chmod -R 666 /usr/lib/huayra-duino-lr/resources/app/*.ini
+chmod 777 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch
+chmod 666 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch/*
  
 exit 0
 #DEBHELPER#
