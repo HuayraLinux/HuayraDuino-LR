@@ -581,6 +581,7 @@ Blockly.Msg.ARD_MEGAPI_ENCODER_BACKWARD = "Backward";  // untranslated
 Blockly.Msg.ARD_MEGAPI_ENCODER_LEFT = "Left";  // untranslated
 Blockly.Msg.ARD_MEGAPI_ENCODER_RIGHT = "Right";  // untranslated
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN = "Set turn to MegaPi Encoder Motors";  // untranslated
+Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIME = "turn wait in milliseconds";  // untranslated
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_DIR = "direction";  // untranslated
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIP = "Sets turn direction to go for MegaPi Encoder Motors";  // untranslated
 Blockly.Msg.ARD_DS18B20_SETUP = "Config Sensor type DS18B20";  // untranslated

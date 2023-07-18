@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "carlosperate",
-		"lastupdated": "2023-07-14 20:14:55.353752",
+		"lastupdated": "2023-07-18 10:24:53.731887",
 		"locale": "en",
 		"messagedocumentation" : "qqq_ardublockly"
 	},
@@ -192,6 +192,7 @@
 	"ARD_MEGAPI_ENCODER_LEFT": "Left",
 	"ARD_MEGAPI_ENCODER_RIGHT": "Right",
 	"ARD_MEGAPI_ENCODER_SPIN": "Set turn to MegaPi Encoder Motors",
+	"ARD_MEGAPI_ENCODER_SPIN_TIME": "turn wait in milliseconds",
 	"ARD_MEGAPI_ENCODER_SPIN_DIR": "direction",
 	"ARD_MEGAPI_ENCODER_SPIN_TIP": "Sets turn direction to go for MegaPi Encoder Motors",
 	"ARD_DS18B20_SETUP": "Config Sensor type DS18B20",

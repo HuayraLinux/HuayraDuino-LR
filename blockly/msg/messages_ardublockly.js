@@ -244,6 +244,7 @@ Blockly.Msg.ARD_MEGAPI_ENCODER_BACKWARD = 'Backward';
 Blockly.Msg.ARD_MEGAPI_ENCODER_LEFT = 'Left';
 Blockly.Msg.ARD_MEGAPI_ENCODER_RIGHT = 'Right';
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN = 'Set turn to MegaPi Encoder Motors';
+Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIME = 'turn wait in milliseconds';
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_DIR = 'direction';
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIP = 'Sets turn direction to go for MegaPi Encoder Motors';
 

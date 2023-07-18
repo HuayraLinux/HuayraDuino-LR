@@ -194,6 +194,7 @@
 	"ARD_MEGAPI_ENCODER_BACKWARD": "atrás",
 
 	"ARD_MEGAPI_ENCODER_SPIN": "Girar Motores MegaPi Encoder",
+	"ARD_MEGAPI_ENCODER_SPIN_TIME": "Girar durante (en milisegundos)",
 	"ARD_MEGAPI_ENCODER_SPIN_DIR": "dirección",
 	"ARD_MEGAPI_ENCODER_LEFT": "izquierda",
 	"ARD_MEGAPI_ENCODER_RIGHT": "derecha",

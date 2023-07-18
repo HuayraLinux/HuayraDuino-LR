@@ -198,6 +198,7 @@
 	"ARD_MEGAPI_ENCODER_LEFT": "Left",
 	"ARD_MEGAPI_ENCODER_RIGHT": "Right",
 	"ARD_MEGAPI_ENCODER_SPIN": "Set turn to MegaPi Encoder Motor",
+	"ARD_MEGAPI_ENCODER_SPIN_TIME": "turn wait in milliseconds",
 	"ARD_MEGAPI_ENCODER_SPIN_DIR": "direction",
 	"ARD_MEGAPI_ENCODER_SPIN_TIP": "Sets turn direction to go for MegaPi Encoder Motor",
 	

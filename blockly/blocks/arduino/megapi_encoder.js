@@ -577,12 +577,12 @@ Blockly.Blocks['megaPi_encoder_gostraight'] = {
         .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_GO_STRAIGHT)
     this.appendDummyInput()
         .appendField(
-            new Blockly.FieldInstance('megaPi_encoder',
+            new Blockly.FieldInstance('megaPi_encoder_1',
                                       Blockly.Msg.ARD_MEGAPI_ENCODER_DEFAULT_NAME,
                                       false, true, true),
             'MEGAPI_ENCODER_NAME_1')
         .appendField(
-            new Blockly.FieldInstance('megaPi_encoder',
+            new Blockly.FieldInstance('megaPi_encoder_2',
                                       Blockly.Msg.ARD_MEGAPI_ENCODER_DEFAULT_NAME,
                                       false, true, true),
             'MEGAPI_ENCODER_NAME_2')
@@ -606,7 +606,7 @@ Blockly.Blocks['megaPi_encoder_gostraight'] = {
     if (!this.workspace) return;  // Block has been deleted.
 
     var instanceName_1 = this.getFieldValue('MEGAPI_ENCODER_NAME_1')
-    if (Blockly.Instances.isInstancePresent(instanceName_1, 'megaPi_encoder', this)) {
+    if (Blockly.Instances.isInstancePresent(instanceName_1, 'megaPi_encoder_1', this)) {
       this.setWarningText(null);
     } else {
       // Set a warning to select a valid encoder config block
@@ -616,7 +616,7 @@ Blockly.Blocks['megaPi_encoder_gostraight'] = {
                 '%2', instanceName_1));
     }
     var instanceName_2 = this.getFieldValue('MEGAPI_ENCODER_NAME_2')
-    if (Blockly.Instances.isInstancePresent(instanceName_2, 'megaPi_encoder', this)) {
+    if (Blockly.Instances.isInstancePresent(instanceName_2, 'megaPi_encoder_2', this)) {
       this.setWarningText(null);
     } else {
       // Set a warning to select a valid encoder config block
@@ -644,18 +644,22 @@ Blockly.Blocks['megaPi_encoder_spin'] = {
         .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN)
     this.appendDummyInput()
         .appendField(
-            new Blockly.FieldInstance('megaPi_encoder',
+            new Blockly.FieldInstance('megaPi_encoder_1',
                                       Blockly.Msg.ARD_MEGAPI_ENCODER_DEFAULT_NAME,
                                       false, true, true),
             'MEGAPI_ENCODER_NAME_1')
         .appendField(
-            new Blockly.FieldInstance('megaPi_encoder',
+            new Blockly.FieldInstance('megaPi_encoder_2',
                                       Blockly.Msg.ARD_MEGAPI_ENCODER_DEFAULT_NAME,
                                       false, true, true),
             'MEGAPI_ENCODER_NAME_2')
     this.appendDummyInput()
       .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_DIR)
       .appendField(new Blockly.FieldDropdown(ENCODER_SPIN_NAMES), 'MEGAPI_ENCODER_SPIN')
+    this.appendValueInput('MEGAPI_ENCODER_SPIN_TIME')
+      .setAlign(Blockly.ALIGN_RIGHT)
+      .appendField(Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIME)
+      .setCheck(Blockly.Types.NUMBER.checkList);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIP);
@@ -669,7 +673,7 @@ Blockly.Blocks['megaPi_encoder_spin'] = {
     if (!this.workspace) return;  // Block has been deleted.
 
     var instanceName_1 = this.getFieldValue('MEGAPI_ENCODER_NAME_1')
-    if (Blockly.Instances.isInstancePresent(instanceName_1, 'megaPi_encoder', this)) {
+    if (Blockly.Instances.isInstancePresent(instanceName_1, 'megaPi_encoder_1', this)) {
       this.setWarningText(null);
     } else {
       // Set a warning to select a valid encoder config block
@@ -679,7 +683,7 @@ Blockly.Blocks['megaPi_encoder_spin'] = {
                 '%2', instanceName_1));
     }
     var instanceName_2 = this.getFieldValue('MEGAPI_ENCODER_NAME_2')
-    if (Blockly.Instances.isInstancePresent(instanceName_2, 'megaPi_encoder', this)) {
+    if (Blockly.Instances.isInstancePresent(instanceName_2, 'megaPi_encoder_2', this)) {
       this.setWarningText(null);
     } else {
       // Set a warning to select a valid encoder config block

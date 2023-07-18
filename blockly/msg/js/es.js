@@ -581,6 +581,7 @@ Blockly.Msg.ARD_MEGAPI_ENCODER_BACKWARD = "atrás";
 Blockly.Msg.ARD_MEGAPI_ENCODER_LEFT = "izquierda";
 Blockly.Msg.ARD_MEGAPI_ENCODER_RIGHT = "derecha";
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN = "Girar Motores MegaPi Encoder";
+Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIME = "Girar durante (en milisegundos)";
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_DIR = "dirección";
 Blockly.Msg.ARD_MEGAPI_ENCODER_SPIN_TIP = "Asigna hacia donde girará los Motores MegaPi Encoder";
 Blockly.Msg.ARD_DS18B20_SETUP = "Configurar Sensor tipo DS18B20";

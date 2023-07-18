@@ -117,7 +117,7 @@ Blockly.Arduino['megaPi_encoder_setmotorpwm'] = function(block) {
   var mpEncoderInstanceName = block.getFieldValue('MEGAPI_ENCODER_NAME');
   var mpEncoderPWMValue = Blockly.Arduino.valueToCode(block, 'MEGAPI_ENCODER_SETMOTORPWM',
       Blockly.Arduino.ORDER_ATOMIC) || '0';
-  var code = mpEncoderInstanceName + '.setMotorPWM(' + mpEncoderPWMValue + ');\n';
+  var code = mpEncoderInstanceName + '.setMotorPwm(' + mpEncoderPWMValue + ');\n';
   return code;
 };
 
@@ -295,6 +295,8 @@ Blockly.Arduino['megaPi_encoder_spin'] = function(block) {
   var mpEncoderInstanceName_2 = block.getFieldValue('MEGAPI_ENCODER_NAME_2');
     
   var mpEncoderSpin = block.getFieldValue('MEGAPI_ENCODER_SPIN');
+  var mpEncoderSpinTimeValue = Blockly.Arduino.valueToCode(block, 'MEGAPI_ENCODER_SPIN_TIME',
+      Blockly.Arduino.ORDER_ATOMIC) || '0.0';
   var code = '';
   if( mpEncoderSpin === 'ENCODER_LEFT')
   {
@@ -306,7 +308,7 @@ Blockly.Arduino['megaPi_encoder_spin'] = function(block) {
     code = mpEncoderInstanceName_1 + '.setMotorPwm(-100);\n' +
            mpEncoderInstanceName_2 + '.setMotorPwm(-100);\n';
   }
-  code = code + 'delay(4000);\n' + 
+  code = code + 'delay('+mpEncoderSpinTimeValue+');\n' + 
                 mpEncoderInstanceName_1 + '.updateSpeed();\n' +
                 mpEncoderInstanceName_2 + '.updateSpeed();\n';
 

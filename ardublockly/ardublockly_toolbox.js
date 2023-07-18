@@ -257,6 +257,11 @@ Ardublockly.TOOLBOX_XML =
 '    </block>' +
 '    <block type="megaPi_encoder_spin">' +
 '      <field name="MEGAPI_ENCODER_SPIN">ENCODER_LEFT</field>' +
+'      <value name="MEGAPI_ENCODER_SPIN_TIME">' +
+'        <block type="math_number">' +
+'          <field name="NUM">4000</field>' +
+'        </block>' +
+'      </value>' +
 '    </block>' +
 '    <block type="megaPi_encoder_settarpwm">' +
 '      <value name="MEGAPI_ENCODER_SETTARPWM">' +
