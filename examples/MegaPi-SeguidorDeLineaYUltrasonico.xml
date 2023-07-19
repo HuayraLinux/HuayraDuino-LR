@@ -1,0 +1,181 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="megaPi_encoder_init" id="q/0XFM{hz#QmhU9_VUO4" x="29" y="0"></block>
+  <block type="megaPi_encoder_config" id="aWoocNsxk=m[obF!(rj." x="34" y="32">
+    <field name="MEGAPI_ENCODER_NAME">MiMotorIzquierdo</field>
+    <field name="MEGAPI_ENCODER_SLOT">SLOT1</field>
+  </block>
+  <block type="megaPi_encoder_config" id="?}PF3q@b@xRJWJ=[:~8X" x="36" y="121">
+    <field name="MEGAPI_ENCODER_NAME">MiMotorDerecho</field>
+    <field name="MEGAPI_ENCODER_SLOT">SLOT2</field>
+  </block>
+  <block type="megaPi_ultrasonic_config" id="|R83dTzR.sIwQtO=%prU" x="291" y="164">
+    <field name="MEGAPI_ULTRASONIC_NAME">MiMegaPiUltrasonico</field>
+    <field name="MEGAPI_ULTRASONIC_PORT">7</field>
+  </block>
+  <block type="megaPi_line_follower_config" id="8zu,2=3Q%McN=S4p=Bqt" x="31" y="213">
+    <field name="MEGAPI_LINE_FOLLOWER_NAME">MiMegaPiSeguidor</field>
+    <field name="MEGAPI_LINE_FOLLOWER_PORT">6</field>
+  </block>
+  <block type="variables_set" id="Zpg}NAV)Q{_?yM9+v;wn" x="22" y="268">
+    <field name="VAR">j</field>
+    <value name="VALUE">
+      <block type="megaPi_ultrasonic_distance" id="+8AdLBlW8dcZ%DKaSAZP">
+        <field name="MEGAPI_ULTRASONIC_NAME">MiMegaPiUltrasonico</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="keilaKK#{q1/J)NeUkBV">
+        <field name="VAR">i</field>
+        <value name="VALUE">
+          <block type="megaPi_line_follower_read_sensors" id="OE]-RU^6;Qeo~C(v[2CD">
+            <field name="MEGAPI_LINE_FOLLOWER_NAME">MiMegaPiSeguidor</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="@nGLJm9^Jq?[qK1i+KSt">
+            <mutation elseif="3"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="d,v1*7TrdgXQf~8.XxLk">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="EV|g}+[~#rA]^zG`?rE8">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="hfX%nLKaIqDe-+{p^!tE">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="megaPi_encoder_gostraight" id="5S(pE8?=Vw`XI63RB=[[">
+                <field name="MEGAPI_ENCODER_NAME_1">MiMotorIzquierdo</field>
+                <field name="MEGAPI_ENCODER_NAME_2">MiMotorDerecho</field>
+                <field name="MEGAPI_ENCODER_GO_STRAIGHT_FOR_BACK">ENCODER_FORWARD</field>
+                <value name="MEGAPI_ENCODER_GO_STRAIGHT">
+                  <block type="math_number" id="p[:57;dyM1UZ1F?LQ5Qf">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="ix6+4/I1+t!}t#[YCz*#">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="hG,D9{LiYoKb*:-ngTf_">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="mF`NC@{j*qLj#lp0Db4-">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="megaPi_encoder_spin" id="h2MRAj.qv8_K]yMx/CHk">
+                <field name="MEGAPI_ENCODER_NAME_1">MiMotorIzquierdo</field>
+                <field name="MEGAPI_ENCODER_NAME_2">MiMotorDerecho</field>
+                <field name="MEGAPI_ENCODER_SPIN">ENCODER_LEFT</field>
+                <value name="MEGAPI_ENCODER_SPIN_TIME">
+                  <block type="math_number" id="z:zyy?=11DXj}0x|er-^">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_compare" id="}SpAHEy-2JqzNhl123wa">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="h7m4-6%5d#[f)K9K|bu7">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="O:7[L%Cnf![*;nla0t#Q">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="megaPi_encoder_spin" id="xeq5_GW-aZG;XN[/m6iF">
+                <field name="MEGAPI_ENCODER_NAME_1">MiMotorIzquierdo</field>
+                <field name="MEGAPI_ENCODER_NAME_2">MiMotorDerecho</field>
+                <field name="MEGAPI_ENCODER_SPIN">ENCODER_RIGHT</field>
+                <value name="MEGAPI_ENCODER_SPIN_TIME">
+                  <block type="math_number" id="IH.nS:j){HRS0+Omdx/]">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block type="logic_compare" id=";x-/wvO8W4V.@2th}IOO">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="0oF92Il@uI1RcDZIa[se">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="tSotptO#*c}FIGMN6^;/">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="controls_if" id=")hSyK*Psks;Icto+0T-y">
+                <value name="IF0">
+                  <block type="logic_compare" id="2SMdC#fL-@Xr,Gwg_ojq">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="e5QmYXQ-!!R[U%t`n2.(">
+                        <field name="VAR">j</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="c7ovb)M5aVqD,mr[94M#">
+                        <field name="NUM">25</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="megaPi_encoder_spin" id="=3w00Y9qki,:Y/?^?zgf">
+                    <field name="MEGAPI_ENCODER_NAME_1">MiMotorIzquierdo</field>
+                    <field name="MEGAPI_ENCODER_NAME_2">MiMotorDerecho</field>
+                    <field name="MEGAPI_ENCODER_SPIN">ENCODER_LEFT</field>
+                    <value name="MEGAPI_ENCODER_SPIN_TIME">
+                      <block type="math_number" id="6jn|gt#5j5Vi9^t;3UHX">
+                        <field name="NUM">4000</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="megaPi_encoder_gostraight" id="vd4kE%zIUPINp%|e3N9c">
+                    <field name="MEGAPI_ENCODER_NAME_1">MiMotorIzquierdo</field>
+                    <field name="MEGAPI_ENCODER_NAME_2">MiMotorDerecho</field>
+                    <field name="MEGAPI_ENCODER_GO_STRAIGHT_FOR_BACK">ENCODER_FORWARD</field>
+                    <value name="MEGAPI_ENCODER_GO_STRAIGHT">
+                      <block type="math_number" id="|Dv.SDZN)2?+8cwNl1U2">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

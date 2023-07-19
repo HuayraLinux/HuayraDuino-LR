@@ -1,0 +1,62 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="b)D/Fl%.V/Fm{Kh=mF;," x="26" y="4">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="DS18B20_config" id="[]d5kUX?NYSYWQBzyNmp" x="32" y="45">
+    <field name="DS18B20_NAME">ds_1</field>
+    <field name="DS18B20_ADDRESS">direccion_2</field>
+    <field name="DS18B20_PIN">2</field>
+  </block>
+  <block type="serial_print" id="/ZQw;h]#wTC6[7im5Kb|" x="18" y="135">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="NEW_LINE">FALSE</field>
+    <value name="CONTENT">
+      <block type="DS18B20_temp_F" id=")UC*W%]z|nsmn!2Ww`F]">
+        <field name="DS18B20_NAME">ds_1</field>
+      </block>
+    </value>
+    <next>
+      <block type="serial_print" id="X%Z(Xvud.jGrIr!q3{%[">
+        <field name="SERIAL_ID">Serial</field>
+        <field name="NEW_LINE">FALSE</field>
+        <value name="CONTENT">
+          <block type="text" id="4nFveD=Ye;WmCW_iLLXq">
+            <field name="TEXT"> ºF,</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="kb%IfV(;0A)pLjtU(1%`">
+            <field name="SERIAL_ID">Serial</field>
+            <field name="NEW_LINE">FALSE</field>
+            <value name="CONTENT">
+              <block type="DS18B20_temp_C" id=";?yWAVd~k19AC6lC2yTb">
+                <field name="DS18B20_NAME">ds_1</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_print" id="]o/yId2mSo6p`{q%hO^z">
+                <field name="SERIAL_ID">Serial</field>
+                <field name="NEW_LINE">TRUE</field>
+                <value name="CONTENT">
+                  <block type="text" id="jL!^AS2?H*qjyV*HF`jG">
+                    <field name="TEXT"> ºC</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="time_delay" id="x!x*?7hkKBuLK_g%=Mji">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="]A7bR4BiIPSBJJ7by-FJ">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
