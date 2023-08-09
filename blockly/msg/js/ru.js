@@ -408,6 +408,7 @@ Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "НетВложенногоБлока";
 Blockly.Msg.ARD_HIGH = "HIGH";
 Blockly.Msg.ARD_LOW = "LOW";
 Blockly.Msg.ARD_ANALOGREAD = "Считать аналоговый вход №";
+Blockly.Msg.ARD_ANALOGREAD_PULLUP = "Считать pull up аналоговый вход №";
 Blockly.Msg.ARD_ANALOGREAD_TIP = "Возвращает значение от 0 до 1024";
 Blockly.Msg.ARD_ANALOGWRITE = "Установить аналоговый выход №";
 Blockly.Msg.ARD_ANALOGWRITE_TIP = "Записать аналоговую величину (0 - 255) в указанный ШИМ порт";
@@ -510,6 +511,7 @@ Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR = "Read MegaPi line follower se
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_TIP = "Reads a number for a specific MegaPi line follower peripheral";
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_1 = "S1_IN_S2_IN   = 0x00    sensor1 and sensor2 are both inside of black line ";
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_2 = "S1_IN_S2_OUT  = 0x01    sensor1 is inside of black line and sensor2 is outside of black line";
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_3 = "S1_OUT_S2_IN  = 0x02    sensor1 is outside of black line and sensor2 is inside of black line";
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_4 = "S1_OUT_S2_OUT = 0x03    sensor1 and sensor2 are both outside of black line";
 Blockly.Msg.ARD_MEGAPI_ULTRASONIC_SETUP = "Setup MegaPi ultrasonic:";
 Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DEFAULT_NAME = "MyMegaPiUltrasonic";
@@ -598,6 +600,14 @@ Blockly.Msg.ARD_DS18B20_ADDRESS = "direccion de memoria";  // untranslated
 Blockly.Msg.ARD_DS18B20_TEMPERATURE_C = "Leer Temperatura en °C de DS18B20 ";  // untranslated
 Blockly.Msg.ARD_DS18B20_TEMPERATURE_F = "Leer Temperatura en °F de DS18B20 ";  // untranslated
 Blockly.Msg.ARD_DS18B20_COMPONENT = "DS18B20";  // untranslated
+Blockly.Msg.ARD_LCD_I2C_SETUP = "Config LCD I2C";
+Blockly.Msg.ARD_LCD_I2C_DEFAULT_NAME = "lcd";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR = "Set position col, row LCD I2C";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR_COL = "col";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR_ROW = "row";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR_TIP = "Sets the position in cols and rows to LCD I2C";
+Blockly.Msg.ARD_LCD_I2C_PRINT = "print";
+Blockly.Msg.ARD_LCD_I2C_COMPONENT = "LCD I2C";
 Blockly.Msg.ARD_COMPONENT_WARN1 = "Блок настроек %1 с тем же именем %2 должен быть использован с этим блоком!";
 Blockly.Msg.ARD_TIME_DELAY = "ждать";
 Blockly.Msg.ARD_TIME_MS = "миллисекунд";

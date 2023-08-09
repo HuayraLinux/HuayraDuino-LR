@@ -18,6 +18,7 @@
 	"ARD_HIGH": "HOOG",
 	"ARD_LOW": "LAAG",
 	"ARD_ANALOGREAD": "lees analoge pin#",
+	"ARD_ANALOGREAD_PULLUP": "lees via pull up analoge pin#",
 	"ARD_ANALOGREAD_TIP": "Geeft waarde terug tussen 0 and 1024 zoals gelezen op de analoge PIN",
 	"ARD_ANALOGWRITE": "schrijf naar analoge pin#",
 	"ARD_ANALOGWRITE_TIP": "Schrijf analoge waarde tussen 0 en 255 naar de opgegeven PWM PIN",
@@ -202,6 +203,15 @@
 	"ARD_MEGAPI_ENCODER_SPIN_TIP": "Sets turn direction to go for MegaPi Encoder Motor",
 	"ARD_MEGAPI_ENCODER_SPIN_DIR": "direction",
 	
+	"ARD_LCD_I2C_SETUP": "Config LCD I2C",  
+	"ARD_LCD_I2C_DEFAULT_NAME": "lcd",  
+	"ARD_LCD_I2C_SETCURSOR": "Set position col, row LCD I2C",  
+	"ARD_LCD_I2C_SETCURSOR_COL": "col",  
+	"ARD_LCD_I2C_SETCURSOR_ROW": "row",  
+	"ARD_LCD_I2C_SETCURSOR_TIP": "Sets the position in cols and rows to LCD I2C",  
+	"ARD_LCD_I2C_PRINT": "print",  
+	"ARD_LCD_I2C_COMPONENT": "LCD I2C",
+
 	"ARD_COMPONENT_WARN1": "Een %1 Definieer blok met dezelfde %1 naam moet toegevoegd worden om dit blok te gebruiken!",
 	"ARD_TIME_DELAY": "wacht",
 	"ARD_TIME_MS": "milliseconden",

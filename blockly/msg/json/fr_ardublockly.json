@@ -18,6 +18,7 @@
 	"ARD_HIGH": "HAUT",
 	"ARD_LOW": "BAS",
 	"ARD_ANALOGREAD": "Lecture du signal analogique #",
+	"ARD_ANALOGREAD_PULLUP": "Lecture via pull up du signal analogique #",
 	"ARD_ANALOGREAD_TIP": "Valeur de retour entre 0 et 1024",
 	"ARD_ANALOGWRITE": "Ecriture du signal analogique #",
 	"ARD_ANALOGWRITE_TIP": "Ecrit une valeur analogique comprise entre 0 et 255 sur un port PWM spécifique",
@@ -201,6 +202,15 @@
 	"ARD_MEGAPI_ENCODER_SPIN_DIR": "direction",
 	"ARD_MEGAPI_ENCODER_SPIN_TIP": "Sets turn direction to go for MegaPi Encoder Motor",
 		
+	"ARD_LCD_I2C_SETUP": "Config LCD I2C",  
+	"ARD_LCD_I2C_DEFAULT_NAME": "lcd",  
+	"ARD_LCD_I2C_SETCURSOR": "Set position col, row LCD I2C",  
+	"ARD_LCD_I2C_SETCURSOR_COL": "col",  
+	"ARD_LCD_I2C_SETCURSOR_ROW": "row",  
+	"ARD_LCD_I2C_SETCURSOR_TIP": "Sets the position in cols and rows to LCD I2C",  
+	"ARD_LCD_I2C_PRINT": "print",  
+	"ARD_LCD_I2C_COMPONENT": "LCD I2C",
+
 	"ARD_TIME_DELAY": "Délai d'attente de",
 	"ARD_TIME_MS": "millisecondes",
 	"ARD_TIME_DELAY_TIP": "Attendre un délai précis en millisecondes",

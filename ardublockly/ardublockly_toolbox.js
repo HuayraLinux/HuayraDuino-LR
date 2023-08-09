@@ -136,6 +136,7 @@ Ardublockly.TOOLBOX_XML =
 '    </block>' +
 '    <block type="io_analogwrite"></block>' +
 '    <block type="io_analogread"></block>' +
+'    <block type="io_analogread_pullup"></block>' +
 '    <block type="io_highlow"></block>' +
 '    <block type="io_pulsein">' +
 '      <value name="PULSETYPE">' +
@@ -235,6 +236,22 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="DS18B20_temp_C">' +
 '    </block>' +
 '    <block type="DS18B20_temp_F">' +
+'    </block>' +
+'    <block type="LCD_I2C_config">' +
+'    </block>' +
+'    <block type="LCD_I2C_setcursor">' +
+'      <value name="LCD_I2C_SETCURSOR_COL">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="LCD_I2C_SETCURSOR_ROW">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="LCD_I2C_print">' +
 '    </block>' +
 '    <block type="spi_setup"></block>' +
 '    <block type="spi_transfer"></block>' +
@@ -359,12 +376,8 @@ Ardublockly.TOOLBOX_XML =
 '      <field name="MEGAPI_DC_MOTOR_PORT">A1</field>' +
 '    </block>' +
 '    <block type="megaPi_dc_motor_stop">' +
-'      <value name="MEGAPI_DC_MOTOR_STOP">' +
-'      </value>' +
 '    </block>' +
 '    <block type="megaPi_dc_motor_run">' +
-'      <value name="MEGAPI_DC_MOTOR_RUN">' +
-'      </value>' +
 '      <value name="MEGAPI_DC_MOTOR_SPEEDS">' +
 '        <block type="math_number">' +
 '          <field name="NUM">100</field>' +
@@ -409,8 +422,6 @@ Ardublockly.TOOLBOX_XML =
 '      </value>' +
 '    </block>' +
 '    <block type="megaPi_stepper_run">' +
-'      <value name="MEGAPI_STEPPER_RUN">' +
-'      </value>' +
 '    </block>' +
 '  </category>' +
 '</xml>';

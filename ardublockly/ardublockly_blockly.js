@@ -6,6 +6,19 @@
  */
 'use strict';
 
+// Core Bockly.
+goog.require('Blockly');
+
+/*
+// Choose a language.
+goog.require('Blockly.Msg');
+// And as many of these as you want.
+goog.require('Blockly.Blocks.logic');
+goog.require('Blockly.JavaScript.logic');
+goog.require('Blockly.Blocks.loops');
+goog.require('Blockly.JavaScript.loops');
+*/
+
 /** Create a namespace for the application. */
 var Ardublockly = Ardublockly || {};
 

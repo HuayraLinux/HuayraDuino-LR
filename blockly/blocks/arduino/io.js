@@ -171,6 +171,34 @@ Blockly.Blocks['io_analogread'] = {
   }
 };
 
+Blockly.Blocks['io_analogread_pullup'] = {
+  /**
+   * Block for reading an analogue input.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://arduino.cc/en/Reference/AnalogRead');
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_ANALOGREAD_PULLUP)
+        .appendField(new Blockly.FieldDropdown(
+            Blockly.Arduino.Boards.selected.analogPins), 'PIN');
+    this.setOutput(true, Blockly.Types.NUMBER.output);
+    this.setTooltip(Blockly.Msg.ARD_ANALOGREAD_TIP);
+  },
+  /** @return {!string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.NUMBER;
+  },
+  /**
+   * Updates the content of the the pin related fields.
+   * @this Blockly.Block
+   */
+  updateFields: function() {
+    Blockly.Arduino.Boards.refreshBlockFieldDropdown(this, 'PIN', 'analogPins');
+  }
+};
+
 Blockly.Blocks['io_highlow'] = {
   /**
    * Block for creating a pin state.

@@ -408,6 +408,7 @@ Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "ChildBlockMissing";
 Blockly.Msg.ARD_HIGH = "HIGH";  // untranslated
 Blockly.Msg.ARD_LOW = "LOW";  // untranslated
 Blockly.Msg.ARD_ANALOGREAD = "leer pin analogico #";
+Blockly.Msg.ARD_ANALOGREAD_PULLUP = "leer via pull up pin analogico #";
 Blockly.Msg.ARD_ANALOGREAD_TIP = "Devuelve un valor entre 0 y 1024";
 Blockly.Msg.ARD_ANALOGWRITE = "asignar pin analogico #";
 Blockly.Msg.ARD_ANALOGWRITE_TIP = "Escribe un valor analogico entre 0 y 255 a un puerto PWM especifico";
@@ -510,6 +511,7 @@ Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR = "Leer sensores de MegaPi segu
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_TIP = "Lee un numero de entrada/salida que devuelve el seguidor de linea MegaPi";
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_1 = "S1_IN_S2_IN   = 0x00    sensor1 y sensor2 ambos dentro de la linea negra ";
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_2 = "S1_IN_S2_OUT  = 0x01    sensor1 esta dentro de la linea negra y sensor2 esta fuera de la linea negra";
+Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_3 = "S1_OUT_S2_IN  = 0x02    sensor1 esta fuera de la linea negra y sensor2 esta dentro de la linea negra";
 Blockly.Msg.ARD_MEGAPI_LINE_FOLLOWER_READ_SENSOR_INFO_4 = "S1_OUT_S2_OUT = 0x03    sensor1 and sensor2 ambos fuera de la linea negra ";
 Blockly.Msg.ARD_MEGAPI_ULTRASONIC_SETUP = "Configurar MegaPi sensor ultrasonico";
 Blockly.Msg.ARD_MEGAPI_ULTRASONIC_DEFAULT_NAME = "MiMegaPiUltrasonico";
@@ -598,6 +600,14 @@ Blockly.Msg.ARD_DS18B20_ADDRESS = "direccion de memoria";
 Blockly.Msg.ARD_DS18B20_TEMPERATURE_C = "Leer Temperatura en °C de DS18B20 ";
 Blockly.Msg.ARD_DS18B20_TEMPERATURE_F = "Leer Temperatura en °F de DS18B20 ";
 Blockly.Msg.ARD_DS18B20_COMPONENT = "DS18B20";
+Blockly.Msg.ARD_LCD_I2C_SETUP = "Configurar LCD I2C";
+Blockly.Msg.ARD_LCD_I2C_DEFAULT_NAME = "lcd";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR = "Establecer columna y fila para LCD I2C";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR_COL = "columna";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR_ROW = "fila";
+Blockly.Msg.ARD_LCD_I2C_SETCURSOR_TIP = "Establece posicion de columna y fila para LCD I2C";
+Blockly.Msg.ARD_LCD_I2C_PRINT = "imprimir";
+Blockly.Msg.ARD_LCD_I2C_COMPONENT = "LCD I2C";
 Blockly.Msg.ARD_COMPONENT_WARN1 = "Un bloque de configuracion %1 con el mismo nombre %2 debe ser usado con este bloque!";
 Blockly.Msg.ARD_TIME_DELAY = "esperar";
 Blockly.Msg.ARD_TIME_MS = "milisegundos";

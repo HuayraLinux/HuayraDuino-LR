@@ -127,6 +127,25 @@ Blockly.Arduino['io_analogread'] = function(block) {
 };
 
 /**
+ * Function for reading an analogue pin value (X).
+ * Arduino code: setup { pinMode(X, INPUT_PULLUP); }
+ *               loop  { analogRead(X)      }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['io_analogread_pullup'] = function(block) {
+  var pin = block.getFieldValue('PIN');
+  Blockly.Arduino.reservePin(
+      block, pin, Blockly.Arduino.PinTypes.INPUT, 'Analogue Read');
+
+  var pinSetupCode = 'pinMode(' + pin + ', INPUT_PULLUP);';
+  Blockly.Arduino.addSetup('io_' + pin, pinSetupCode, false);
+
+  var code = 'analogRead(' + pin + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+/**
  * Value for defining a digital pin state.
  * Arduino code: loop { HIGH / LOW }
  * @param {!Blockly.Block} block Block to generate the code from.

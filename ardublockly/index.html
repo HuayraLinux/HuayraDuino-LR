@@ -44,6 +44,7 @@
   <script src="../blockly/blocks/arduino/megapi_DCMotor.js"></script>
   <script src="../blockly/blocks/arduino/megapi_encoder.js"></script>
   <script src="../blockly/blocks/arduino/ds18b20.js"></script>
+  <script src="../blockly/blocks/arduino/Liquid_Crystal_I2C.js"></script>
   <script src="../blockly/blocks/arduino/time.js"></script>
   <script src="../blockly/blocks/arduino/tone.js"></script>
   <script src="../blockly/blocks/arduino/variables.js"></script>
@@ -66,6 +67,7 @@
   <script src="../blockly/generators/arduino/megapi_DCMotor.js"></script>
   <script src="../blockly/generators/arduino/megapi_encoder.js"></script>
   <script src="../blockly/generators/arduino/ds18b20.js"></script>
+  <script src="../blockly/generators/arduino/Liquid_Crystal_I2C.js"></script>
   <script src="../blockly/generators/arduino/text.js"></script>
   <script src="../blockly/generators/arduino/time.js"></script>
   <script src="../blockly/generators/arduino/tone.js"></script>
@@ -368,9 +370,9 @@
   </div>
 
   <!-- Prompt: Content is loaded using JavaScript to display input prompt -->
-  <div id="gen_prompt" class="modal modal_small modal-fixed-footer">
+  <div id="gen_prompt" class="modal modal_small" style="height: 200px !important;">
     <div class="modal-content">
-      <p><span id="gen_prompt_message">Mensage rápido</span></p>
+      <p><span id="gen_prompt_message">Mensaje rápido</span></p>
       <p><input id="gen_prompt_input" value="test" /></p>
     </div>
     <div class="modal-footer">

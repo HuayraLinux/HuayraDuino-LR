@@ -33,7 +33,6 @@ goog.require('goog.events.BrowserFeature');
 goog.require('goog.math.Coordinate');
 goog.require('goog.userAgent');
 
-
 /**
  * Add a CSS class to a element.
  * Similar to Closure's goog.dom.classes.add, except it handles SVG elements.
@@ -496,7 +495,8 @@ Blockly.genUid = function() {
 Blockly.genUid.soup_ = '!#%()*+,-./:;=?@[]^_`{|}~' +
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-/**
+/*    
+/ * *
  * Local prompt function created to allow blockly developers to overwrite it
  * with a customised version. This version uses the default window.prompt
  * functionality, but it has been designed to be easily replaced by an 
@@ -508,7 +508,7 @@ Blockly.genUid.soup_ = '!#%()*+,-./:;=?@[]^_`{|}~' +
  * @return {undefined|null|string} If no callback is provided it returns the
  *     value directly from window.prompt (null or string), otherwise it
  *     returns undefined.
- */
+ * /
 Blockly.prompt = function(message, opt_defaultInput, opt_callback) {
   if (opt_callback === undefined) {
     // If no callback provided to revert back to the normal blockly prompt
@@ -523,3 +523,4 @@ Blockly.prompt = function(message, opt_defaultInput, opt_callback) {
   }
   return undefined;
 };
+*/
