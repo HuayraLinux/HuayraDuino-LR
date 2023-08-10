@@ -202,6 +202,17 @@
 	"ARD_MEGAPI_ENCODER_SPIN_TIME": "turn wait in milliseconds",
 	"ARD_MEGAPI_ENCODER_SPIN_DIR": "direction",
 	"ARD_MEGAPI_ENCODER_SPIN_TIP": "Sets turn direction to go for MegaPi Encoder Motor",
+	
+	"ARD_MHZ19_SETUP": "Config Sensor MHZ19 CO2",
+	"ARD_MHZ19_DEFAULT_NAME": "MyMHZ19",
+	"ARD_MHZ19_RX_PORT": "RX Pin",
+	"ARD_MHZ19_TX_PORT": "TX Pin",
+	"ARD_MHZ19_SETUP_TIP": "Configures a MHZ19 CO2 Sensor",
+	"ARD_MHZ19_GETCO2": "Get MHZ19 CO2 (ppm)",
+	"ARD_MHZ19_GETCO2_TIP": "Gets MHZ19 Sensor CO2 value in ppm",
+	"ARD_MHZ19_GETTEMP": "Get MHZ19 Temperature in °C",
+	"ARD_MHZ19_GETTEMP_TIP": "Gets MHZ19 Sensor Temperature value in °C",
+
 	"ARD_LCD_I2C_SETUP": "Config LCD I2C",  
 	"ARD_LCD_I2C_DEFAULT_NAME": "lcd",  
 	"ARD_LCD_I2C_SETCURSOR": "Set position col, row LCD I2C",  

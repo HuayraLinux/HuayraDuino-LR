@@ -253,6 +253,12 @@ Ardublockly.TOOLBOX_XML =
 '    </block>' +
 '    <block type="LCD_I2C_print">' +
 '    </block>' +
+'    <block type="mhz19_config">' +
+'      <field name="MHZ19_RX_PORT">10</field>' +
+'      <field name="MHZ19_TX_PORT">11</field>' +
+'    </block>' +
+'    <block type="mhz19_getCO2"></block>' +
+'    <block type="mhz19_getTemperature"></block>' +
 '    <block type="spi_setup"></block>' +
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +

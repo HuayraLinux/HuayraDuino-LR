@@ -200,7 +200,17 @@
 	"ARD_MEGAPI_ENCODER_LEFT": "izquierda",
 	"ARD_MEGAPI_ENCODER_RIGHT": "derecha",
 	"ARD_MEGAPI_ENCODER_SPIN_TIP": "Asigna hacia donde girará los Motores MegaPi Encoder",
-	
+
+	"ARD_MHZ19_SETUP": "Configurar Sensor MHZ19 CO2",
+	"ARD_MHZ19_DEFAULT_NAME": "MiMHZ19",
+	"ARD_MHZ19_RX_PORT": "Pin RX",
+	"ARD_MHZ19_TX_PORT": "Pin TX",
+	"ARD_MHZ19_SETUP_TIP": "Configura un Sensor MHZ19 de CO2",
+	"ARD_MHZ19_GETCO2": "Leer CO2 en ppm de MHZ19",
+	"ARD_MHZ19_GETCO2_TIP": "Lee el valor de CO2 en ppm del Sensor MHZ19",
+	"ARD_MHZ19_GETTEMP": "Leer Temperatura en °C de MHZ19",
+	"ARD_MHZ19_GETTEMP_TIP": "Lee el valor de temperatura en °C del Sensor MHZ19",
+
 	"ARD_DS18B20_SETUP": "Configurar Sensor tipo DS18B20",  
 	"ARD_DS18B20_DEFAULT_NAME": "ds_1",  
 	"ARD_DS18B20_PIN": "Pin",  

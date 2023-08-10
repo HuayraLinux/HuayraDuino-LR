@@ -266,6 +266,16 @@ Blockly.Msg.ARD_DS18B20_TEMPERATURE_C = 'Leer Temperatura en °C de DS18B20 ';
 Blockly.Msg.ARD_DS18B20_TEMPERATURE_F = 'Leer Temperatura en °F de DS18B20 ';
 Blockly.Msg.ARD_DS18B20_COMPONENT = 'DS18B20';
 
+Blockly.Msg.ARD_MHZ19_SETUP = 'Config Sensor MHZ19 CO2';
+Blockly.Msg.ARD_MHZ19_DEFAULT_NAME = 'MyMHZ19';
+Blockly.Msg.ARD_MHZ19_RX_PORT = 'RX Pin';
+Blockly.Msg.ARD_MHZ19_TX_PORT = 'TX Pin';
+Blockly.Msg.ARD_MHZ19_SETUP_TIP = 'Configures a MHZ19 CO2 Sensor';
+Blockly.Msg.ARD_MHZ19_GETCO2 = 'Get MHZ19 CO2 (ppm)';
+Blockly.Msg.ARD_MHZ19_GETCO2_TIP = 'Gets MHZ19 Sensor CO2 value in ppm';
+Blockly.Msg.ARD_MHZ19_GETTEMP = 'Get MHZ19 Temperature in °C';
+Blockly.Msg.ARD_MHZ19_GETTEMP_TIP = 'Gets MHZ19 Sensor Temperature value in °C';
+
 Blockly.Msg.ARD_LCD_I2C_SETUP = 'Config LCD I2C';
 Blockly.Msg.ARD_LCD_I2C_DEFAULT_NAME = 'lcd'
 Blockly.Msg.ARD_LCD_I2C_SETCURSOR = 'Set position col, row LCD I2C';
