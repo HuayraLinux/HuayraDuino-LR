@@ -939,7 +939,7 @@ ul.side-nav li.logo:hover {
 }
 ul.side-nav li.side-menu-end {
   opacity: 0.92;
-  background-color: #9DDBF3;  /* #eeeeee; */
+  background-color: #9DDBF3;  /* #eeeeee; */ 
   border-radius: 0px 0px 25px 0px;
   border-left: 4px solid white; /*  #9DDBF3 #ffffff;*/
   border-bottom: 4px solid #9DDBF3; /* #dddddd;*/

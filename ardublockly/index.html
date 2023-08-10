@@ -44,6 +44,7 @@
   <script src="../blockly/blocks/arduino/megapi_DCMotor.js"></script>
   <script src="../blockly/blocks/arduino/megapi_encoder.js"></script>
   <script src="../blockly/blocks/arduino/ds18b20.js"></script>
+  <script src="../blockly/blocks/arduino/mhz19.js"></script>
   <script src="../blockly/blocks/arduino/Liquid_Crystal_I2C.js"></script>
   <script src="../blockly/blocks/arduino/time.js"></script>
   <script src="../blockly/blocks/arduino/tone.js"></script>
@@ -67,6 +68,7 @@
   <script src="../blockly/generators/arduino/megapi_DCMotor.js"></script>
   <script src="../blockly/generators/arduino/megapi_encoder.js"></script>
   <script src="../blockly/generators/arduino/ds18b20.js"></script>
+  <script src="../blockly/generators/arduino/mhz19.js"></script>
   <script src="../blockly/generators/arduino/Liquid_Crystal_I2C.js"></script>
   <script src="../blockly/generators/arduino/text.js"></script>
   <script src="../blockly/generators/arduino/time.js"></script>
@@ -86,6 +88,7 @@
       <img src="./img/splash_Duino.png"
            alt="imagen splash" 
            style="border: 3px solid white; outline: 3px solid red">
+      <p id="version_hd" style="margin-top: -28px; color: #777777"></p>
     </div>
     <!-- splash screen end -->
   <!-- Horizontal Navigation bar -->
@@ -162,7 +165,6 @@
               <li id="menu_example_3"><a href="#!">Repetición en serie</a></li>
               <li id="menu_example_4"><a href="#!">Servo knob</a></li>
               <li id="menu_example_5"><a href="#!">Knob paso a paso</a></li>
-              <li class="no-padding side-menu-end">&nbsp;</li>
             </ul>
           </div>
         </li>
@@ -451,6 +453,6 @@
        window.api.send("toMain", logOutput.checked); 
     })
 </script>
-  <script src="./splashscreen.js"></script>
+  <script type="module" src="./splashscreen.js"></script>
 </body>
 </html>
