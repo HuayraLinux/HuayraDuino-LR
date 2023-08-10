@@ -7,6 +7,8 @@
  */
 'use strict';
 
+goog.require('Blockly.dialog');
+
 /** Create a namespace for the application. */
 var Ardublockly = Ardublockly || {};
 
@@ -16,7 +18,7 @@ var Ardublockly = Ardublockly || {};
  * @return {!boolean} True if Ardublockly running in Electron application
  */
 Ardublockly.isRunningElectron = function() {
-  return navigator.userAgent.toLowerCase().indexOf('ardublockly') > -1;
+  return navigator.userAgent.toLowerCase().indexOf('electron') > -1;
 };
 
 /**
@@ -25,7 +27,7 @@ Ardublockly.isRunningElectron = function() {
  * This function is to be executed as soon as this file is loaded, and because
  * of that this file must be called in the HTML before the Materialize library
  * is loaded.
- */
+ 
 (function loadJsInElectron(){
   if (Ardublockly.isRunningElectron()) {
     var projectLocator = require('electron').remote.require('./projectlocator.js');
@@ -36,7 +38,7 @@ Ardublockly.isRunningElectron = function() {
     window.JsDiff = require(projectRoot + '/ardublockly/js_libs/diff.js');
   }
 })();
-
+*/
 /** Sets all the elements using the container class to have a width of 100%. */
 Ardublockly.containerFullWidth = function() {
   var containers = $('.container');
@@ -63,11 +65,15 @@ Ardublockly.htmlPrompt = function(message, defaultValue, callback) {
   $('#gen_prompt_input').val(defaultValue);
   // Bind callback events to buttons
   $('#gen_prompt_ok_link').bind('click', function() {
-    callback($('#gen_prompt_input').val());
+    if($('#gen_prompt_input').val() !== defaultValue)
+      callback($('#gen_prompt_input').val());
+    $('#gen_prompt_ok_link').unbind('click');
   });
+  /*
   $('#gen_prompt_cancel_link').bind('click', function() {
     callback(null);
   });
+  */ 
   $('#gen_prompt').openModal();
   window.location.hash = '';
 };
@@ -78,14 +84,14 @@ window.addEventListener('load', function load(event) {
   if (Ardublockly.isRunningElectron()) {
     // Edit the page layout for better appearance on desktop
     Ardublockly.containerFullWidth();
-    Ardublockly.hideSideMenuButton();
+    //Ardublockly.hideSideMenuButton();
 
     // Prevent browser zoom changes like pinch-to-zoom
-    var webFrame = require('electron').webFrame;
-    webFrame.setZoomLevelLimits(1, 1);
+    // var webFrame = require('electron').webFrame;
+    // webFrame.setZoomLevelLimits(1, 1);
 
     // Electron does not offer a prompt, so replace Blocks version with modal
     // Original signature: function(message, opt_defaultInput, opt_callback)
-    Blockly.prompt = Ardublockly.htmlPrompt;
+    Blockly.dialog.setPrompt(Ardublockly.htmlPrompt);
   }
 });

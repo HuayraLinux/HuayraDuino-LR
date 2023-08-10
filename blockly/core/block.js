@@ -701,7 +701,7 @@ Blockly.Block.prototype.getInstances = function(opt_instanceType) {
             field.getInstanceTypeValue(opt_instanceType) :
             field.getValue();
         if (validInstance) {
-          vars.push(validInstance);
+          vars.push(validInstance); 
         }
       }
     }
@@ -723,7 +723,7 @@ Blockly.Block.prototype.renameInstance = function(
       if (field instanceof Blockly.FieldInstance) {
         var validInstance = field.getInstanceTypeValue(instanceType);
         if (validInstance && Blockly.Names.equals(oldName, validInstance)) {
-          field.setValue(newName);
+          field.setValue(newName); 
         }
       }
     }

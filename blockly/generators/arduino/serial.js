@@ -57,3 +57,31 @@ Blockly.Arduino['serial_setup'] = function(block) {
   var code = '';
   return code;
 };
+
+/**
+ * Code generator to read an angle value from a serial com (X).
+ * Arduino code: 
+ *               loop  {  Serial.read();    }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['serial_read'] = function(block) {
+  var serialId = block.getFieldValue('SERIAL_ID');
+
+  var code = serialId + '.read()';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+/**
+ * Function for reading a serial available num of reads.
+ * Arduino code: 
+ *               loop  { Serial.available()     }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['serial_available'] = function(block) {
+  var serialId = block.getFieldValue('SERIAL_ID');
+
+  var code = serialId + '.available()';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

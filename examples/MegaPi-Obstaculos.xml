@@ -1,0 +1,102 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="megaPi_ultrasonic_config" id="8bh%M7Vupsc04ug{={Uh" x="1" y="-29">
+    <field name="MEGAPI_ULTRASONIC_NAME">MiMegaPiUltrasonico</field>
+    <field name="MEGAPI_ULTRASONIC_PORT">7</field>
+  </block>
+  <block type="megaPi_encoder_init" id=",)c!*ykEPtm~C}wIXDD|" x="0" y="28"></block>
+  <block type="megaPi_encoder_config" id="_WCkBcz`0VTv;W)Us.Tm" x="1" y="64">
+    <field name="MEGAPI_ENCODER_NAME">MiMotorIzquierdo</field>
+    <field name="MEGAPI_ENCODER_SLOT">SLOT1</field>
+  </block>
+  <block type="megaPi_encoder_config" id="!L@wznMG^XFN;Bh7(u1D" x="260" y="61">
+    <field name="MEGAPI_ENCODER_NAME">MiMotorDerecho</field>
+    <field name="MEGAPI_ENCODER_SLOT">SLOT2</field>
+  </block>
+  <block type="variables_set" id="{e^MrLX!tV#NUdjcP]rN" x="-1" y="141">
+    <field name="VAR">i</field>
+    <value name="VALUE">
+      <block type="megaPi_ultrasonic_distance" id="ePX[mA{YmOuGPJlCa9J~">
+        <field name="MEGAPI_ULTRASONIC_NAME">MiMegaPiUltrasonico</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="BvETzoCXs2L0iXr||yr{">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="o/VS)?w#d~==Ln;{T[Xh">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="variables_get" id="|dTnoWZI4dJHrCaF3x?H">
+                <field name="VAR">i</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="JCA5kh9CaoFWVa`A;lKn">
+                <field name="NUM">25</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="megaPi_encoder_setmotorpwm" id="?Mx`ru.w7cFnQ_96b?lD">
+            <field name="MEGAPI_ENCODER_NAME">MiMotorIzquierdo</field>
+            <value name="MEGAPI_ENCODER_SETMOTORPWM">
+              <block type="math_number" id=":+`mt1,),fc?IlW.]PBA">
+                <field name="NUM">-100</field>
+              </block>
+            </value>
+            <next>
+              <block type="megaPi_encoder_setmotorpwm" id="ffGW-hcfOtZA.G/.DF~U">
+                <field name="MEGAPI_ENCODER_NAME">MiMotorDerecho</field>
+                <value name="MEGAPI_ENCODER_SETMOTORPWM">
+                  <block type="math_number" id="s:?IubyuEFsW5^GKP^dy">
+                    <field name="NUM">-100</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="time_delay" id="c+Z^p:}qMefRU0QlS^0V">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="E,K5CBMz[D+NzPJ/ob!.">
+                        <field name="NUM">4000</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="megaPi_encoder_setmotorpwm" id="k_[fN;geGGvs5A-Mq89f">
+            <field name="MEGAPI_ENCODER_NAME">MiMotorIzquierdo</field>
+            <value name="MEGAPI_ENCODER_SETMOTORPWM">
+              <block type="math_number" id="ooa{=d.8-XEAkjbMnM`C">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+            <next>
+              <block type="megaPi_encoder_setmotorpwm" id="97Kmd.jjhEzut}!hlW.j">
+                <field name="MEGAPI_ENCODER_NAME">MiMotorDerecho</field>
+                <value name="MEGAPI_ENCODER_SETMOTORPWM">
+                  <block type="math_number" id="f0=(p]:MLP~yfmbP0C@r">
+                    <field name="NUM">-100</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="megaPi_encoder_updatespeed" id="[=Ov{KC+J..*idnSHeS+">
+            <field name="MEGAPI_ENCODER_NAME">MiMotorIzquierdo</field>
+            <next>
+              <block type="megaPi_encoder_updatespeed" id="rqjUna2LVN]?xi2]7Y92">
+                <field name="MEGAPI_ENCODER_NAME">MiMotorDerecho</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
