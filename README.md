@@ -19,7 +19,7 @@ git submodule update --init --recursive
 ```
 
 
-## Instación
+## Instalación
 La aplicación corre en forma independiente y puede ser ejecutada con:
 
 $ huayra-duino.sh
