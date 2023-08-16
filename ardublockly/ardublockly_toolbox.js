@@ -259,6 +259,12 @@ Ardublockly.TOOLBOX_XML =
 '    </block>' +
 '    <block type="mhz19_getCO2"></block>' +
 '    <block type="mhz19_getTemperature"></block>' +
+'    <block type="dht11_config">' +
+'      <field name="DHT11_PIN">2</field>' +
+'    </block>' +
+'    <block type="dht11_readhumidity"></block>' +
+'    <block type="dht11_readTemperature"></block>' +
+'    <block type="dht11_computeHeatIndex"></block>' +
 '    <block type="spi_setup"></block>' +
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +

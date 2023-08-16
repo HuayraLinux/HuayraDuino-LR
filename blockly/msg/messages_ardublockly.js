@@ -276,6 +276,20 @@ Blockly.Msg.ARD_MHZ19_GETCO2_TIP = 'Gets MHZ19 Sensor CO2 value in ppm';
 Blockly.Msg.ARD_MHZ19_GETTEMP = 'Get MHZ19 Temperature in °C';
 Blockly.Msg.ARD_MHZ19_GETTEMP_TIP = 'Gets MHZ19 Sensor Temperature value in °C';
 
+Blockly.Msg.ARD_DHT11_SETUP = 'Config Sensor DHT11 Temp/Humidity';
+Blockly.Msg.ARD_DHT11_PIN = 'DHT11 Pin';
+Blockly.Msg.ARD_DHT11_SETUP_TIP = 'Configures a DHT11 Temp/Humidity Sensor';
+Blockly.Msg.ARD_DHT11_READHUMIDITY = 'Get DHT11 Humidity';
+Blockly.Msg.ARD_DHT11_READHUMIDITY_TIP = 'Gets DHT11 Sensor humidity relative value';
+Blockly.Msg.ARD_DHT11_READTEMP = 'Get DHT11 Temperature in °C';
+Blockly.Msg.ARD_DHT11_READTEMP_TIP = 'Gets DHT11 Sensor Temperature value in °C';
+Blockly.Msg.ARD_DHT11_COMPUTEHEAT = 'Get DHT11 Computed Heat Index';
+Blockly.Msg.ARD_DHT11_COMPUTE_TEMP = 'Temperature';
+Blockly.Msg.ARD_DHT11_COMPUTE_HUM = 'Humidity';
+Blockly.Msg.ARD_DHT11_DEFAULT_NAME = 'MyDHT11';
+Blockly.Msg.ARD_DHT11_COMPUTEHEAT_TIP = 'Gets DHT11 Sensor Computed Heat Index value';
+Blockly.Msg.DHT11_APPEND_VARIABLE = Blockly.Msg.VARIABLES_DEFAULT_NAME;
+
 Blockly.Msg.ARD_LCD_I2C_SETUP = 'Config LCD I2C';
 Blockly.Msg.ARD_LCD_I2C_DEFAULT_NAME = 'lcd'
 Blockly.Msg.ARD_LCD_I2C_SETCURSOR = 'Set position col, row LCD I2C';

@@ -23,7 +23,6 @@ module.exports = {
           icon: 'ardublockly/img/HuayraDuino_icono.png',
           desktopTemplate: 'debian/huayra-duino-lr.desktop',
           section: [
-            "electronics",
             "devel"
           ],
           scripts: {

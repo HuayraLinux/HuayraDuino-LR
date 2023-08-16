@@ -31,7 +31,24 @@ var mainWindow = null;
 
 // Set up the app data directory within the Ardublockly home directory
 (function setAppData() {
-    var appDataPath = jetpack.dir(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']).cwd('.hdlr-appdata')
+    var HOME = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']
+    var ardLib = ''
+    console.log('HOME ', HOME)
+    var appDataPath = jetpack.dir(HOME).cwd('.hdlr-appdata')
+    console.log('appDataPath ', appDataPath.path())
+    jetpack.dirAsync(HOME + '/Arduino')
+    .then(jetpack.dirAsync(HOME + '/Arduino/libraries'))
+    .then(jetpack.copyAsync('/usr/lib/huayra-duino-lr/resources/app/arduino-libraries', HOME + '/Arduino/libraries', 
+      { overwrite: (srcInspectData, destInspectData) => {
+          return srcInspectData.modifyTime > destInspectData.modifyTime;
+        }}))
+
+    jetpack.dirAsync(HOME+'/Ejemplos/huayra-duino-lr')
+    .then(jetpack.copyAsync('/usr/lib/huayra-duino-lr/resources/app/examples', HOME+'/Ejemplos/huayra-duino-lr',       
+    { overwrite: (srcInspectData, destInspectData) => {
+      return srcInspectData.modifyTime > destInspectData.modifyTime;
+    }}))
+
     app.setPath('appData', appDataPath.path());
     app.setPath('userData', appDataPath.path());
     app.setPath('cache', appDataPath.path('GenCache'));

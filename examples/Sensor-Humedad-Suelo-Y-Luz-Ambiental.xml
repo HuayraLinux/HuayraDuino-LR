@@ -1,0 +1,220 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="8+MNz1FK66[#WS:_s,nT" x="43" y="24">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="procedures_defnoreturn" id="hw]wJQ!9DzDYw`lfG@G@" x="69" y="51">
+    <field name="NAME">Sensor_Luz_Ambiental</field>
+    <comment pinned="false" h="80" w="160">Lee el sensor de Luz Ambiental conectado a pin Analogico A0 e imprime su valor numerico</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="/{i,M.w(r)34gr@BXOjq">
+        <field name="VAR">i</field>
+        <value name="VALUE">
+          <block type="io_analogread" id="jC9Kj{/+lbSy9.c=v#P0">
+            <field name="PIN">A0</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="P6`PQNj)M`74h162J8B4">
+            <field name="SERIAL_ID">Serial</field>
+            <field name="NEW_LINE">FALSE</field>
+            <value name="CONTENT">
+              <block type="text" id=";=fG.)16So@mVp/Wg#,|">
+                <field name="TEXT">Luz,</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_print" id="]e8PsEZBSSi55qFEjr70">
+                <field name="SERIAL_ID">Serial</field>
+                <field name="NEW_LINE">FALSE</field>
+                <value name="CONTENT">
+                  <block type="variables_get" id="7qLe6X6xZO7VAe2/,4cm">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="+p*aCB%,hUT0:?KYE!!W" x="49" y="204">
+    <field name="NAME">Sensor_Humedad</field>
+    <comment pinned="false" h="80" w="160">Lee el sensor de humedad conectado a pin Analogico A1 e imprime su valor y segun éste, si el ambiente es Seco, Normal o Humedo</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="n:?:8+JR-n9_-VQ7b{]P">
+        <field name="VAR">j</field>
+        <value name="VALUE">
+          <block type="io_analogread" id="K}B@:M[;_HH9,V7@b2~=">
+            <field name="PIN">A1</field>
+          </block>
+        </value>
+        <next>
+          <block type="serial_print" id="xFZF`Uo4lXgd%P5{HL`B">
+            <field name="SERIAL_ID">Serial</field>
+            <field name="NEW_LINE">FALSE</field>
+            <value name="CONTENT">
+              <block type="text" id="Xa*eiRCyLaRot`rl*n~e">
+                <field name="TEXT">Humedad,</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_print" id="[)oZC[FWor3?9S(gMg]S">
+                <field name="SERIAL_ID">Serial</field>
+                <field name="NEW_LINE">FALSE</field>
+                <value name="CONTENT">
+                  <block type="variables_get" id="l@3%i=_^g)0m[R-dV[4A">
+                    <field name="VAR">j</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="t!lzW5b};U:MX3;4Gh;E">
+                    <mutation elseif="2"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="4bWP|dHoIIg~66e=-[=^">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="iSF2k5+nSSdt0Pk?NHDd">
+                            <field name="VAR">j</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="w_C)^stbH[djW_*nqS2M">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="serial_print" id="~GS?Z=h|F/qk0+4@W6bU">
+                        <field name="SERIAL_ID">Serial</field>
+                        <field name="NEW_LINE">FALSE</field>
+                        <value name="CONTENT">
+                          <block type="text" id="GD#dqYJ_p9(Fgzz9s)D=">
+                            <field name="TEXT">, Seco</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_operation" id="_;TR0w-WgWga]I.?a(VP">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="logic_compare" id="[GBcmW:y,8S?iDN#wXVp">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="!ieS}_eE9orc)G)EIW?X">
+                                <field name="VAR">j</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="ter6oZNtqOu*{bm=;zmz">
+                                <field name="NUM">901</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="?3.c5+6#C@gZS0%=z|Ft">
+                            <field name="OP">LTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="Uy@/-Mdr!1wKM[|7clQg">
+                                <field name="VAR">j</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="}2~ogl5Hm{DdXKo7bU4)">
+                                <field name="NUM">999</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="serial_print" id="w1R@3],+d6#@|;tLPx/[">
+                        <field name="SERIAL_ID">Serial</field>
+                        <field name="NEW_LINE">FALSE</field>
+                        <value name="CONTENT">
+                          <block type="text" id="Vmr.3AcyU}=UJYM]h312">
+                            <field name="TEXT">, Normal</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF2">
+                      <block type="logic_compare" id="F|B8BZtyLwL[9O^w%,kM">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="U|YDvDX0(mpc:eU,jMvb">
+                            <field name="VAR">j</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="L*#l7)L]].=c331:@iG3">
+                            <field name="NUM">900</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO2">
+                      <block type="serial_print" id="gHLLtR;c_:)#*jleOIP0">
+                        <field name="SERIAL_ID">Serial</field>
+                        <field name="NEW_LINE">FALSE</field>
+                        <value name="CONTENT">
+                          <block type="text" id="G!YD(Mt4N@sZjnj^V~?c">
+                            <field name="TEXT">, Humedo</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_callnoreturn" id="CjS0plP.[ck!G{#54w?b" x="68" y="622">
+    <mutation name="Sensor_Humedad"></mutation>
+    <next>
+      <block type="serial_print" id=".(6]n;PoLw`nqSPP@58?">
+        <field name="SERIAL_ID">Serial</field>
+        <field name="NEW_LINE">FALSE</field>
+        <value name="CONTENT">
+          <block type="text" id="#vB#hsHELf1L0pWIX4Q0">
+            <field name="TEXT">,</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="0ns_Y5XK1HLd}g-Y~6v}">
+            <mutation name="Sensor_Luz_Ambiental"></mutation>
+            <next>
+              <block type="time_delay" id="g+otd;/T01*zoL7u@{d}">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="pGj09%uwv[erLt!f!Q|f">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_print" id="NKc.H]PN6],ia9%0]p!J">
+                    <field name="SERIAL_ID">Serial</field>
+                    <field name="NEW_LINE">TRUE</field>
+                    <value name="CONTENT">
+                      <block type="text" id="[GcRtUevr4FL@7fOLl#S">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

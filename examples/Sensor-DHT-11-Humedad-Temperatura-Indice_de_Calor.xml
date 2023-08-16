@@ -1,0 +1,115 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="{xvu49Fnwj4Jd7mHe{(T" x="113" y="47">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="dht11_config" id="_[K@(R@(noS3Gg%Ua49M" x="113" y="92">
+    <field name="DHT11_NAME">MiDHT11</field>
+    <field name="DHT11_PIN">2</field>
+  </block>
+  <block type="variables_set" id="vMhjel{h+GOa*#-eaePk" x="160" y="177">
+    <field name="VAR">humedad</field>
+    <value name="VALUE">
+      <block type="dht11_readhumidity" id="M%O([w{t]S3s`Dapr~%/">
+        <field name="DHT11_NAME">MiDHT11</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id=";-!H}c]~F._P3o!,of[w">
+        <field name="VAR">temperatura</field>
+        <value name="VALUE">
+          <block type="dht11_readTemperature" id="L:=g#.Gok7iKo~u}`pvU">
+            <field name="DHT11_NAME">MiDHT11</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="iNaCJ0j==XfcJhmYEU4]">
+            <field name="VAR">indiceCalor</field>
+            <value name="VALUE">
+              <block type="dht11_computeHeatIndex" id="JCN[G9tjr:RH5YH1}I9z">
+                <field name="DHT11_NAME">MiDHT11</field>
+                <field name="DHT11_TEMP">temperatura</field>
+                <field name="DHT11_HUM">humedad</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_print" id="Sxc%;+,~aN:Mc`+]8wxR">
+                <field name="SERIAL_ID">Serial</field>
+                <field name="NEW_LINE">FALSE</field>
+                <value name="CONTENT">
+                  <block type="text" id="H@!Ca,EDluc@V,D~o)p7">
+                    <field name="TEXT">Humedad,</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_print" id="%UZz!h%:?Bz%7oE9kT39">
+                    <field name="SERIAL_ID">Serial</field>
+                    <field name="NEW_LINE">FALSE</field>
+                    <value name="CONTENT">
+                      <block type="variables_get" id="d^}Fysi/SN?vt0192%D/">
+                        <field name="VAR">humedad</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="serial_print" id="U?hGSAB`F99yWlJ|O=Pz">
+                        <field name="SERIAL_ID">Serial</field>
+                        <field name="NEW_LINE">FALSE</field>
+                        <value name="CONTENT">
+                          <block type="text" id="LL;%aes.TjXLCU)8FzTz">
+                            <field name="TEXT">, Temperatura,</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="serial_print" id="Uh,;VPlIqg7UFJ#B[aX,">
+                            <field name="SERIAL_ID">Serial</field>
+                            <field name="NEW_LINE">FALSE</field>
+                            <value name="CONTENT">
+                              <block type="variables_get" id="HA`mm%R8OHYyQ^*Ff3|V">
+                                <field name="VAR">temperatura</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="serial_print" id="xcoixp)+~.wkJW[KyuJy">
+                                <field name="SERIAL_ID">Serial</field>
+                                <field name="NEW_LINE">FALSE</field>
+                                <value name="CONTENT">
+                                  <block type="text" id=".ap;0/8ty8P!Fhj?xv12">
+                                    <field name="TEXT">, Indice de Calor,</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="serial_print" id="f?^H(j%y#1PLoYxkb8~*">
+                                    <field name="SERIAL_ID">Serial</field>
+                                    <field name="NEW_LINE">TRUE</field>
+                                    <value name="CONTENT">
+                                      <block type="variables_get" id="-YNjfSBy~)M,xWYDH01=">
+                                        <field name="VAR">indiceCalor</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="time_delay" id="eJWHbYH{;UT8Iy4O[wt0">
+                                        <value name="DELAY_TIME_MILI">
+                                          <block type="math_number" id="ajb-s_8dIRQoAdH{jJG[">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
