@@ -270,7 +270,7 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
 '  <sep></sep>' +
-'  <category id="makeBlock" name="MakeBlocks">' +
+'  <category id="makeBlock" name="MakeBlock">' +
 '    <block type="megaPi_encoder_init">' +
 '    </block>'+
 '    <block type="megaPi_encoder_config">' +

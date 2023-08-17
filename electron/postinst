@@ -3,6 +3,6 @@
 chmod -R 666 /usr/lib/huayra-duino-lr/resources/app/*.ini
 chmod 777 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch
 chmod 666 /usr/lib/huayra-duino-lr/resources/app/ArdublocklySketch/*
-
+chmod -R 755 /usr/lib/huayra-duino-lr/resources/app/arduino-libraries/Makeblock-Libraries-master
 exit 0
 #DEBHELPER#
