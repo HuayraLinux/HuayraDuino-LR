@@ -67,5 +67,5 @@ limitations under the License.
 [14]: http://ardublockly-builds.s3-website-us-west-2.amazonaws.com/index.html?prefix=mac/
 [15]: http://www.arduino.cc
 [16]: https://github.com/BlocklyDuino/BlocklyDuino
-[17]: ./blockly/README.md
-[18]: https://github.com/HuayraLinux/HuayraDuino-LR/package/README.md
+[17]: https://github.com/HuayraLinux/HuayraDuino-LR/blob/main/blockly/README.md
+[18]: https://github.com/HuayraLinux/HuayraDuino-LR/blob/main/package/README.md
