@@ -60,7 +60,7 @@
 
 namespace eval ttk {
 
-set tip145 [catch {font create TkDefaultFont}]
+variable tip145 [catch {font create TkDefaultFont}]
 catch {font create TkTextFont}
 catch {font create TkHeadingFont}
 catch {font create TkCaptionFont}
@@ -82,7 +82,7 @@ switch -- [tk windowingsystem] {
                 set F(family) "MS Sans Serif"
             }
         } else {
-            if {[lsearch -exact [font families] Tahoma] != -1} {
+            if {[lsearch -exact [font families] Tahoma] >= 0} {
                 set F(family) "Tahoma"
             } else {
                 set F(family) "MS Sans Serif"
@@ -131,10 +131,10 @@ switch -- [tk windowingsystem] {
 	    set F(family) "Helvetica"
 	    set F(fixed)  "courier"
 	}
-	set F(size) -12
-	set F(ttsize) -10
-	set F(capsize) -14
-	set F(fixedsize) -12
+	set F(size) 10
+	set F(ttsize) 9
+	set F(capsize) 12
+	set F(fixedsize) 10
 
 	font configure TkDefaultFont -family $F(family) -size $F(size)
 	font configure TkTextFont    -family $F(family) -size $F(size)

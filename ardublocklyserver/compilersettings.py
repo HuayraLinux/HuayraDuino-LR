@@ -261,10 +261,6 @@ class ServerCompilerSettings(object):
 
     def set_sketch_dir_from_file(self, new_sketch_dir):
         """ The sketch directory must be a folder """
-        print('\n directory %s' % new_sketch_dir)
-        if new_sketch_dir == "HOME":
-            new_sketch_dir = os.getenv("HOME")
-        print('\n directory %s' % new_sketch_dir)
         if os.path.isdir(new_sketch_dir):
             self.__sketch_dir = new_sketch_dir
         else:

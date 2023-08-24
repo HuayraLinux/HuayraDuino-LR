@@ -95,6 +95,8 @@ def load_arduino_cli(sketch_path=None):
             # This success conclusion message gets overwritten in case of error
             conclusion = 'arduinoOpVerifiedTitle'
             cli_command.append('--verify')
+            cli_command.append('--board')
+            cli_command.append(settings.get_arduino_board_flag())
         elif settings.load_ide_option == 'open':
             print('\nOpening the sketch in the Arduino IDE...')
             conclusion = 'arduinoOpOpenedTitle'

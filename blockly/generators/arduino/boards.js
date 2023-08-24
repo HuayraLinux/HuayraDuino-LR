@@ -171,13 +171,14 @@ Blockly.Arduino.Boards.profiles.duemilanove_328p =
 
 /** Arduino Mega board profile. */
 Blockly.Arduino.Boards.profiles.mega = {
-  name: 'Arduino Mega',
+  name: 'Arduino Mega or Mega 2560',
   description: 'Arduino Mega-compatible board',
   compilerFlag: 'arduino:avr:mega',
   analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 15),
   //TODO: Check if the Mega can use analogue pins as digital, it would be
   //      logical but it is not clear on the arduino.cc website
-  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(0, 53),
+  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(0, 53).concat(
+                Blockly.Arduino.Boards.generateAnalogIo(0, 15)),
   pwmPins: Blockly.Arduino.Boards.generateDigitalIo(2, 13).concat(
                Blockly.Arduino.Boards.generateDigitalIo(44, 46)),
   serial: [['serial', 'Serial'], ['serial_1', 'Serial1'],

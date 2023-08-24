@@ -18,7 +18,6 @@ cd HuayraDuino-LR
 git submodule update --init --recursive
 ```
 
-
 ## Instalación
 La aplicación corre en forma independiente y puede ser ejecutada con:
 
@@ -26,7 +25,9 @@ $ huayra-duino.sh
 
 Necesitás tener instalada la [Arduino IDE version 1.6.x o superior][2].
 
-
+## Compilación del Servidor
+Para construir el servidor que se comunica con Arduino IDE utilizar 
+python package/build_pyinstaller.py segun se explica en [Readme build packages][18]
 
 ## Créditos
 Este proyecto está basado en [BlocklyDuino][16] y Blockly (copyright of Google Inc.) [https://developers.google.com/blockly/][1].
@@ -66,5 +67,5 @@ limitations under the License.
 [14]: http://ardublockly-builds.s3-website-us-west-2.amazonaws.com/index.html?prefix=mac/
 [15]: http://www.arduino.cc
 [16]: https://github.com/BlocklyDuino/BlocklyDuino
-[17]: blockly/README.md
-
+[17]: ./blockly/README.md
+[18]: ./package/README.md
