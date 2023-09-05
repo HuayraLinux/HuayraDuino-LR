@@ -77,9 +77,9 @@ class ServerCompilerSettings(object):
     __serial_ports = {'port0': 'COM1'}
 
     # Class dictionary to define IDE load options, static content
-    __ide_load_options = {'open': 'Open sketch in IDE',
-                          'verify': 'Verify sketch',
-                          'upload': 'Compile and Upload sketch'}
+    __ide_load_options = {'open': 'Abrir archivo en el Arduino IDE',
+                          'verify': 'Verificar archivo',
+                          'upload': 'Compilar y Subir archivo'}
 
     #
     # Singleton creator and destructor
