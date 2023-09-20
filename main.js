@@ -99,7 +99,7 @@ function setMainMenu() {
 // Electron application entry point
 app.on('ready', function() {
     server.startServer();
-    mainWindow = new BrowserWindow({width: 1000, height: 700, 
+    mainWindow = new BrowserWindow({width: 1000, height: 740, 
         webPreferences: {
             nodeIntegration: false, // is default value after Electron v5
             contextIsolation: true, // protect against prototype pollution
@@ -110,7 +110,7 @@ app.on('ready', function() {
     mainWindow.type = 'desktop'
     mainWindow.title = 'HuayraDuino'
     mainWindow.minWidth = 530
-    mainWindow.minHeight = 740
+    mainWindow.minHeight = 780
     mainWindow.resizable = true 
     mainWindow.icon = path.join(__dirname, './favicon.png')
     //mainWindow.webContents.session.clearCache()

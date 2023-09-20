@@ -19,7 +19,6 @@
   <script src="../blockly/blockly_uncompressed.js"></script>
   <script src="../blockly/blocks_compressed.js"></script>
   <script src="../blockly/arduino_compressed.js"></script> 
-
   <!-- To use the uncompressed version comment out the above and comment in the ones below
   
   <script src="../blockly/blockly_uncompressed.js"></script>
@@ -178,7 +177,29 @@
   <!-- Content -->
   <div class="container">
     <div class="row">
-      <div class="col s12 m12 l8" style="position:relative">
+      <!-- Switch guardar datos -->
+      <div class="col s8 m8 l8">
+        <div class="switch card-panel" id="switch">
+          <label>
+            <input id="log-output" type="checkbox">
+            <span class="lever"></span>
+          </label>  
+          Guardar Resultados en ~/huayraduino.csv
+        </div> 
+      </div>
+      <!-- Switch Panel derecho-->
+      <div class="col s4 m4 l4">
+        <div class="switch card-panel" id="switch-hide-right-pannel" >
+        <label>
+          <input id="hide-right-pannel" type="checkbox">
+          <span class="lever"></span>
+        </label>  
+        Ocultar panel de Código
+      </div> 
+      </div>
+    </div>
+    <div class="row">
+      <div id="blockly-pannel" class="col s8 m8 l8" style="position:relative">
         <!-- Toolbox visibility button -->
         <a id="button_toggle_toolbox" class="waves-effect waves-light btn-flat button_toggle_toolbox_off" style="display: none"><i id="button_toggle_toolbox_icon" class="mdi-action-visibility-off"></i></a>
         <!-- Arduino IDE action buttons -->
@@ -232,8 +253,8 @@
           </div>
         </div>
       </div>
-    <div class="col s12 m12 l4">
-        <ul class="collapsible z-depth-1" data-collapsible="accordion">
+      <div id="code-pannel" class="col s4 m4 l4">
+          <ul class="collapsible z-depth-1" data-collapsible="accordion">
           <li>
             <div class="collapsible-header active">
               <span class="collapsible_logo">{ }</span>
@@ -251,16 +272,6 @@
             <div class="collapsible-body" style="position:relative" id="xml_collapsible_body">
               <a class="btn-floating btn-large waves-effect waves-light arduino_teal z-depth-1-half" id="button_load_xml"><i class="mdi-action-extension"></i></a>
               <textarea id="content_xml" class="content content_height_transition content_xml_large" wrap="soft"></textarea>
-            </div>
-          </li>
-          <li>
-            <!-- Switch -->
-            <div class="switch" id="switch" >
-              <label>
-                <input id="log-output" type="checkbox">
-                <span class="lever"></span>
-              </label>  
-              Guardar Resultados en ~/huayraduino.csv
             </div>
           </li>
         </ul>
@@ -453,6 +464,24 @@
     var logOutput = document.getElementById('log-output');
     logOutput.addEventListener('change', function(){
        window.api.send("toMain", logOutput.checked); 
+    })
+    var rightPanelCheckbox = document.getElementById('switch-hide-right-pannel'); 
+    var divRightPanel = document.getElementById("code-pannel"); 
+    var divBlocklyPanel = document.getElementById("blockly-pannel"); 
+    var divContentBlock = document.getElementById("content_blocks");   
+
+    rightPanelCheckbox.addEventListener('change', function(){
+      if (divRightPanel.style.display === 'none') {
+          divBlocklyPanel.className = "col s12 m12 l8";
+          divRightPanel.style.display = "block";
+      } else {
+        divBlocklyPanel.className = "col s12 l12";
+        divRightPanel.style.display = "none";
+      }
+      divContentBlock.style.width = divBlocklyPanel.style.width;
+      divContentBlock.style.height = divBlocklyPanel.style.height;
+      workspace = Blockly.getMainWorkspace();
+      Blockly.asyncSvgResize(workspace);
     })
 </script>
   <script type="module" src="./splashscreen.js"></script>

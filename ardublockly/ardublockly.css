@@ -120,6 +120,7 @@ body {
 
 .switch {
   display: block;
+  margin: 0 0;
   min-height: 3rem;
   line-height: 3rem;
   padding: 0 1rem;
@@ -149,25 +150,25 @@ body {
   min-height: 480px;
 }
 .blocks_panel_large {
-  height: -moz-calc(100vh - 190px);     /* Firefox  */
-  height: -webkit-calc(100vh - 190px);  /* WebKit   */
-  height: -o-calc(100vh - 190px);       /* Opera    */
-  height: calc(100vh - 190px);          /* Standard */
+  height: -moz-calc(100vh - 303px);     /* Firefox  */
+  height: -webkit-calc(100vh - 303px);  /* WebKit   */
+  height: -o-calc(100vh - 303px);       /* Opera    */
+  height: calc(100vh - 303px);          /* Standard */
 }
 .blocks_panel_small {
-  height: -moz-calc(100vh - 350px);     /* Firefox  */
-  height: -webkit-calc(100vh - 350px);  /* WebKit   */
-  height: -o-calc(100vh - 350px);       /* Opera    */
-  height: calc(100vh - 350px);          /* Standard */
+  height: -moz-calc(100vh - 450px);     /* Firefox  */
+  height: -webkit-calc(100vh - 450px);  /* WebKit   */
+  height: -o-calc(100vh - 450px);       /* Opera    */
+  height: calc(100vh - 450px);          /* Standard */
 }
 #content_blocks {
   margin: 0;
   padding: 0;
   min-height: 480px;
-  height: -moz-calc(100vh - 190px);     /* Firefox  */
-  height: -webkit-calc(100vh - 190px);  /* WebKit   */
-  height: -o-calc(100vh - 190px);       /* Opera    */
-  height: calc(100vh - 190px);          /* Standard */
+  height: -moz-calc(100vh - 303px);     /* Firefox  */
+  height: -webkit-calc(100vh - 303px);  /* WebKit   */
+  height: -o-calc(100vh - 303px);       /* Opera    */
+  height: calc(100vh - 303px);          /* Standard */
 }
 
 #content_xml {
@@ -179,13 +180,13 @@ body {
   font-size: smaller;
   overflow: scroll;
   font-style: 0.2em !important;
-  min-height: 184px; /* 384 */
+  min-height: 380px; 
 }
 .content_xml_large {
-  height: -moz-calc(78vh - 188px);     /* Firefox  */
-  height: -webkit-calc(78vh - 188px);  /* WebKit   */
-  height: -o-calc(78vh - 188px);       /* Opera    */
-  height: calc(78vh - 188px);          /* Standard */
+  height: -moz-calc(100vh - 404px);     /* Firefox  */
+  height: -webkit-calc(100vh - 404px);  /* WebKit   */
+  height: -o-calc(100vh - 404px);       /* Opera    */
+  height: calc(100vh - 404px);          /* Standard */
   /*
   height: -moz-calc(100vh - 286px);     // Firefox  
   height: -webkit-calc(100vh - 286px);  // WebKit   
@@ -195,10 +196,10 @@ body {
 
 }
 .content_xml_small {
-  height: -moz-calc(100vh - 446px);     /* Firefox  */
-  height: -webkit-calc(100vh - 446px);  /* WebKit   */
-  height: -o-calc(100vh - 446px);       /* Opera    */
-  height: calc(100vh - 446px);          /* Standard */
+  height: -moz-calc(100vh - 450px);     /* Firefox  */
+  height: -webkit-calc(100vh - 450px);  /* WebKit   */
+  height: -o-calc(100vh - 450px);       /* Opera    */
+  height: calc(100vh - 450px);          /* Standard */
 }
 
 /* The materialize framework changes height of the div to show or hide */
@@ -216,13 +217,13 @@ body {
   -webkit-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  min-height: 188px; /*388*/
+  min-height: 386px; 
 }
 .content_arduino_large {
-  height: -moz-calc(78vh - 180px);     /* Firefox  */
-  height: -webkit-calc(78vh - 180px);  /* WebKit   */
-  height: -o-calc(78vh - 180px);       /* Opera    */
-  height: calc(78vh - 180px);          /* Standard */
+  height: -moz-calc(100vh - 396px);     /* Firefox  */
+  height: -webkit-calc(100vh - 396px);  /* WebKit   */
+  height: -o-calc(100vh - 396px);       /* Opera    */
+  height: calc(100vh - 396px);          /* Standard */
   /*
   height: -moz-calc(100vh - 280px);     /* Firefox  
   height: -webkit-calc(100vh - 280px);  /* WebKit   
@@ -231,10 +232,10 @@ body {
   */
 }
 .content_arduino_small {
-  height: -moz-calc(100vh - 440px);     /* Firefox  */
-  height: -webkit-calc(100vh - 440px);  /* WebKit   */
-  height: -o-calc(100vh - 440px);       /* Opera    */
-  height: calc(100vh - 440px);          /* Standard */
+  height: -moz-calc(100vh - 450px);     /* Firefox  */
+  height: -webkit-calc(100vh - 450px);  /* WebKit   */
+  height: -o-calc(100vh - 450px);       /* Opera    */
+  height: calc(100vh - 450px);          /* Standard */
 }
 
 .aParent div {
