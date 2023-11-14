@@ -1,6 +1,6 @@
 {
   "name": "huayra-duino-lr",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "HuayraDuino es un entorno de programación visual para Arduino. Está basado en [Blockly][1], con modificaciones para poder generar código [Arduino][15].",
   "main": "main.js",
   "author": "huayra developers",
@@ -23,18 +23,18 @@
   },
   "homepage": "https://github.com/HuayraLinux/HuayraDuino-LR#readme",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.5",
-    "@electron-forge/maker-deb": "^6.0.5",
-    "@electron-forge/maker-rpm": "^6.0.5",
-    "@electron-forge/maker-squirrel": "^6.0.5",
-    "@electron-forge/maker-zip": "^6.0.5",
-    "electron": "^23.1.0",
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "electron": "^27.0.4",
     "electron-rebuild": "^3.2.9",
     "electron-winstaller": "^5.1.0",
     "makensis": "^2.0.5"
   },
   "optionalDependencies": {
-    "electron-installer-debian": "^3.1.0"
+    "electron-installer-debian": "^3.2.0"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
