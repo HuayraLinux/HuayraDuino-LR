@@ -1,6 +1,6 @@
 {
   "name": "huayra-duino-lr",
-  "version": "2.0.11",
+  "version": "2.0.10",
   "description": "HuayraDuino es un entorno de programación visual para Arduino. Está basado en [Blockly][1], con modificaciones para poder generar código [Arduino][15].",
   "main": "main.js",
   "author": "huayra developers",
